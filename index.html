@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tal Mashiach · Multi-instrumentalist, Composer, Producer</title>
+<meta name="description" content="Tal Mashiach is a Brooklyn-based multi-instrumentalist, composer and producer. New album Who’s Around? out now on Anzic Records.">
+<link rel="canonical" href="https://talmashiach.com/">
+<meta property="og:type" content="website"><meta property="og:url" content="https://talmashiach.com/">
+<meta property="og:title" content="Tal Mashiach"><meta property="og:description" content="Tal Mashiach is a Brooklyn-based multi-instrumentalist, composer and producer. New album Who’s Around? out now on Anzic Records.">
+<meta property="og:image" content="https://talmashiach.com/img/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#1A1D20">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"Tal Mashiach","url":"https://talmashiach.com/","genre":["Jazz","World music"],"sameAs":["https://www.instagram.com/talmasaya/","https://www.youtube.com/user/mashiacht","https://open.spotify.com/artist/49crDbUAQYzCIDimqy2vOD","https://talmashiach.bandcamp.com"]}</script>
+<style>:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>
+/* Layout: quiet gallery. One column of generous sections, monochrome with a single red accent from the album cover. */
+:root{
+  --bg:#F3F3F1; --fg:#141414; --muted:#6E6E6A; --line:#D9D9D4; --card:#E8E8E4; --accent:#B3262B;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif; --sans:"Barlow",system-ui,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121212;--fg:#EDEDEA;--muted:#9A9A95;--line:#2B2B29;--card:#1C1C1B;--accent:#E0483F;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121212;--fg:#EDEDEA;--muted:#9A9A95;--line:#2B2B29;--card:#1C1C1B;--accent:#E0483F;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:clamp(64px,10vw,120px)}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(1.9rem,4vw,2.6rem);letter-spacing:.14em;text-transform:uppercase;margin:0 0 40px;line-height:1}
+.label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;flex-direction:column;align-items:center;gap:8px;padding-block:16px 12px}
+.brand{font-family:var(--display);font-weight:600;font-size:1.5rem;letter-spacing:.42em;text-transform:uppercase;text-decoration:none;margin-right:-.42em}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 26px}
+nav a{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--fg)}
+
+/* hero */
+.hero{padding:0;position:relative}
+.hero picture,.hero img{display:block;width:100%;height:clamp(460px,78vh,820px);object-fit:cover;object-position:50% 45%}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(transparent,rgba(0,0,0,.55));pointer-events:none}
+@media (max-width:700px){.hero img{object-position:42% 50%}}
+.hero .tag{z-index:1;position:absolute;left:0;right:0;bottom:clamp(20px,5vw,48px);text-align:center;color:#fff;font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+
+/* album */
+.album .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:center}
+.album .cover{display:block}
+.album .cover img{display:block;width:100%;box-shadow:0 30px 60px -30px rgba(0,0,0,.45);transition:transform .4s}
+.album .cover:hover img{transform:translateY(-4px)}
+.album h2{font-size:clamp(2.6rem,6vw,4.2rem);letter-spacing:.04em;margin:12px 0 14px}
+.album .sub{color:var(--muted);margin-bottom:26px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:13px 20px;border:1px solid var(--fg)}
+.btn.solid{background:var(--fg);color:var(--bg)}
+.btn:hover{background:var(--fg);color:var(--bg)}
+.btn.solid:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+@media (max-width:760px){.album .grid{grid-template-columns:1fr}}
+
+/* projects */
+.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 24px}
+.proj{min-width:0;display:flex;flex-direction:column;gap:6px}
+.proj .ph{display:block;aspect-ratio:4/3;overflow:hidden;background:var(--card);margin-bottom:10px}
+.proj .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.proj .ph:hover img{transform:scale(1.03)}
+.proj h3{font-family:var(--display);font-weight:600;font-size:1.5rem;letter-spacing:.06em;text-transform:uppercase;margin:0;line-height:1.1}
+.proj .role{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.proj p{color:var(--muted);font-size:.95rem}
+.proj .links{display:flex;gap:16px;margin-top:4px}
+.proj .links a{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--line)}
+.proj .links a:hover{border-color:var(--accent)}
+.watch-h{scroll-margin-top:120px}
+.proj .more{margin-top:4px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--line);align-self:start}
+.proj .more:hover{border-color:var(--accent)}
+@media (max-width:820px){.pgrid{grid-template-columns:1fr}}
+
+/* shows */
+.shows-h{margin:0 0 12px}
+.list{list-style:none;margin:0 0 56px;padding:0;border-top:1px solid var(--fg)}
+.list li{display:grid;grid-template-columns:5rem minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.2fr);gap:4px 20px;padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.list .d,.list .date{font-size:.8rem;letter-spacing:.08em;color:var(--muted);font-variant-numeric:tabular-nums;text-transform:uppercase}
+.list .v,.list .venue{font-family:var(--display);font-weight:600;font-size:1.35rem;letter-spacing:.04em;text-transform:uppercase;line-height:1.1}
+.list .c,.list .city{color:var(--muted);font-size:.92rem}
+.list .w{font-size:.92rem}
+.list .tix{justify-self:end;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border:1px solid var(--fg);padding:8px 14px}
+.list li.empty{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:var(--muted)}
+.list li.empty a{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
+@media (max-width:760px){.list li{grid-template-columns:4.2rem minmax(0,1fr)}.list .c,.list .w,.list .city,.list .tix{grid-column:2}.list .tix{justify-self:start}}
+
+/* on stage */
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 14px}
+.shot{margin:0;min-width:0}
+.shot .ph{overflow:hidden;aspect-ratio:4/3;background:var(--card)}
+.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.shot:hover img{transform:scale(1.03)}
+.shot figcaption{display:grid;gap:1px;margin-top:10px}
+.shot figcaption b{font-family:var(--display);font-weight:600;font-size:1.05rem;letter-spacing:.05em;text-transform:uppercase;line-height:1.2}
+.shot figcaption span{font-size:.8rem;color:var(--muted)}
+@media (max-width:760px){.shots{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* music */
+.music-h{margin:0 0 18px}
+.disco{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:36px 22px;margin-bottom:64px}
+.rec{margin:0;min-width:0}
+.rec .sleeve{display:block;aspect-ratio:1;overflow:hidden;background:var(--card)}
+.rec .sleeve img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.rec .sleeve:hover img{transform:scale(1.04)}
+.rec figcaption{display:grid;gap:2px;margin-top:12px}
+.rec b{font-family:var(--display);font-weight:600;font-size:1.1rem;letter-spacing:.04em;text-transform:uppercase;line-height:1.15;overflow-wrap:anywhere}
+.rec figcaption>span{font-size:.82rem;color:var(--muted)}
+.stream{display:flex;gap:12px;margin-top:4px}
+.stream a{font-size:.68rem!important;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--fg);border-bottom:1px solid var(--line)}
+.stream a:hover{border-color:var(--accent);color:var(--accent)}
+@media (max-width:900px){.disco{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:520px){.disco{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}}
+
+/* video */
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.vid{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:#000;text-decoration:none}
+.vid img{width:100%;height:100%;object-fit:cover;display:block;opacity:.85;transition:opacity .3s}
+.vid:hover img{opacity:1}
+.vid .play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;border:1px solid #fff;background:rgba(0,0,0,.25)}
+.vid .play::after{content:"";position:absolute;left:23px;top:18px;border-left:16px solid #fff;border-block:11px solid transparent}
+.vid .cap{position:absolute;left:14px;bottom:12px;color:#fff;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.watch-h{margin:44px 0 14px}
+.watch-h.first{margin-top:0}
+.vgrid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.vgrid.three{grid-template-columns:1fr}}
+.vgrid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.vgrid.four .play{width:44px;height:44px;margin:-22px 0 0 -22px}
+.vgrid.four .play::after{left:17px;top:13px;border-left-width:12px;border-block-width:9px}
+@media (max-width:900px){.vgrid.four{grid-template-columns:1fr 1fr}}
+@media (max-width:700px){.vgrid{grid-template-columns:1fr}}
+
+/* about */
+.about .grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,80px);align-items:start}
+.about img{width:100%;display:block}
+.about .text{display:grid;gap:18px;max-width:58ch}
+.about .text p{font-family:var(--serif);font-size:1.12rem;line-height:1.65}
+.quotes{display:grid;gap:22px;margin-top:20px;padding-top:28px;border-top:1px solid var(--line)}
+.quotes blockquote{margin:0}
+.quotes p{font-family:var(--serif)!important;font-style:italic;font-size:1.25rem!important;line-height:1.4}
+.quotes cite{display:block;margin-top:6px;font-style:normal;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:760px){.about .grid{grid-template-columns:1fr}}
+
+/* contact */
+.contact{text-align:center;border-top:1px solid var(--line)}
+.contact h2{margin-bottom:18px}
+.contact .mail{font-family:var(--display);font-size:clamp(1.4rem,3.4vw,2rem);letter-spacing:.06em;text-decoration:none;border-bottom:1px solid var(--accent)}
+.social{list-style:none;margin:36px 0 0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:8px 26px}
+.social a{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+.social a:hover{color:var(--fg)}
+footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.spotify{display:block;width:100%;border:0;border-radius:12px;margin-top:24px}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Tal Mashiach</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#music">Music</a></li><li><a href="#projects">Projects</a></li><li><a href="#shows">Shows</a></li><li><a href="#stage">On stage</a></li>
+      <li><a href="#watch">Watch</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <picture>
+      <img src="img/g/floor.jpg" alt="Tal Mashiach with his double bass and classical guitar">
+    </picture>
+    <p class="tag">Multi-instrumentalist · Composer · Producer</p>
+  </section>
+
+  <section class="album" id="new">
+    <div class="wrap grid">
+      <a class="cover" href="https://link.anzicrecords.com/anz-0095" target="_blank" rel="noopener"><img src="img/cover.jpg" alt="Who’s Around? album cover"></a>
+      <div>
+        <span class="label">New album · Anzic Records</span>
+        <h2>Who’s Around?</h2>
+        <p class="sub">DownBeat Editors’ Pick · FIP Album of the Week</p>
+        <div class="btns">
+          <a class="btn solid" href="https://open.spotify.com/album/2uv1FvgJiEfPS0AjlblOZl" target="_blank" rel="noopener">Spotify</a>
+          <a class="btn" href="https://music.apple.com/us/album/whos-around/6815710306" target="_blank" rel="noopener">Apple Music</a>
+          <a class="btn" href="https://talmashiach.bandcamp.com/album/whos-around" target="_blank" rel="noopener">Bandcamp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="pgrid">
+        <article class="proj">
+          <a class="ph" href="#w-tal"><img src="img/stage/joespub.jpg" alt="Who’s Around? live at Joe’s Pub" loading="lazy"></a>
+          <h3>Who’s Around?</h3>
+          <p class="role">Leader · guitar &amp; bass</p>
+          <p>Sixteen musicians around GTO Trio partners Gadi Lehavi and Ofri Nehemya, with Anat Cohen, Panagiotis Andreou, Khondzi and Maya Belsitzman.</p>
+          <p class="links"><a href="#w-tal">Watch</a><a href="https://open.spotify.com/album/2uv1FvgJiEfPS0AjlblOZl" target="_blank" rel="noopener">Spotify</a></p>
+        </article>
+        <article class="proj">
+          <a class="ph" href="#w-gto"><img src="img/stage/gto-muri.jpg" alt="GTO Trio live in Switzerland" loading="lazy"></a>
+          <h3>GTO Trio</h3>
+          <p class="role">Co-leader · bass</p>
+          <p>With Gadi Lehavi and Ofri Nehemya. Two albums and sold-out tours in Japan and Europe.</p>
+          <p class="links"><a href="#w-gto">Watch</a><a href="https://open.spotify.com/album/0qpNwnAq2JjQiGE63JR1da" target="_blank" rel="noopener">Spotify</a></p>
+        </article>
+        <article class="proj">
+          <a class="ph" href="#w-tm"><img src="img/stage/tmsb.jpg" alt="TM Street Band live in New York" loading="lazy"></a>
+          <h3>TM Street Band</h3>
+          <p class="role">Leader · composer</p>
+          <p>A Brooklyn street band of horns, harmonica and groove. Debut album <em>Sababito</em>.</p>
+          <p class="links"><a href="#w-tm">Watch</a><a href="https://open.spotify.com/album/3f7Jr6hkv470Dr3P1nNO3J" target="_blank" rel="noopener">Spotify</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="shows" id="shows">
+    <div class="wrap">
+      <h2>Shows</h2>
+      <p class="label shows-h">Upcoming</p>
+      <ol class="list" id="upcoming">
+        <li class="empty"><span>New dates soon.</span><a href="https://www.bandsintown.com/a/15496265" target="_blank" rel="noopener">Follow on Bandsintown</a></li>
+      </ol>
+      <p class="label shows-h">Past</p>
+      <ol class="list">
+        <li><span class="d">2026</span><span class="v">Joe’s Pub</span><span class="c">New York</span><span class="w">Who’s Around? release</span></li>
+        <li><span class="d">2024</span><span class="v">Carnegie Hall</span><span class="c">New York</span><span class="w">Anat Cohen Quartetinho</span></li>
+        <li><span class="d">2024</span><span class="v">Hollywood Bowl</span><span class="c">Los Angeles</span><span class="w">Mulatu Astatke</span></li>
+        <li><span class="d">2024</span><span class="v">Newport Jazz Festival</span><span class="c">Newport, RI</span><span class="w">Anat Cohen Quartetinho</span></li>
+        <li><span class="d">2024</span><span class="v">Body &amp; Soul</span><span class="c">Tokyo</span><span class="w">GTO Trio</span></li>
+        <li><span class="d">2023</span><span class="v">Red Sea Jazz Festival</span><span class="c">Eilat</span><span class="w">Tal Mashiach Quartet</span></li>
+        <li><span class="d">2022</span><span class="v">Jazz à Sète</span><span class="c">France</span><span class="w">Omer Avital</span></li>
+        <li><span class="d">2022</span><span class="v">SFJAZZ</span><span class="c">San Francisco</span><span class="w">Anat Cohen Tentet</span></li>
+        <li><span class="d">2018</span><span class="v">Monterey Jazz Festival</span><span class="c">California</span><span class="w">Anat Cohen Tentet</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="stage" id="stage">
+    <div class="wrap">
+      <h2>On stage</h2>
+      <div class="shots">
+      <figure class="shot"><div class="ph"><img src="img/stage/carnegie.jpg" alt="Tal Mashiach with Anat Cohen Tentet, Carnegie Hall · 2019" loading="lazy"></div><figcaption><b>With Anat Cohen Tentet</b><span>Carnegie Hall · 2019</span></figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="img/stage/sete.jpg" alt="Tal Mashiach with Omer Avital, Jazz à Sète, France · 2022" loading="lazy"></div><figcaption><b>With Omer Avital</b><span>Jazz à Sète, France · 2022</span></figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="img/stage/mulatu-met.jpg" alt="Tal Mashiach with Mulatu Astatke, The Met, New York · 2016" loading="lazy"></div><figcaption><b>With Mulatu Astatke</b><span>The Met, New York · 2016</span></figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="img/stage/newport.jpg" alt="Tal Mashiach with Anat Cohen Quartetinho, Newport Jazz Festival · 2024" loading="lazy"></div><figcaption><b>With Anat Cohen Quartetinho</b><span>Newport Jazz Festival · 2024</span></figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="img/stage/shai-trio.jpg" alt="Tal Mashiach with the Shai Maestro Trio, Red Sea Jazz Festival · 2021" loading="lazy"></div><figcaption><b>With the Shai Maestro Trio</b><span>Red Sea Jazz Festival · 2021</span></figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="img/stage/earshot.jpg" alt="Tal Mashiach with Anat Cohen Quartetinho, Earshot Jazz, Seattle · 2022" loading="lazy"></div><figcaption><b>With Anat Cohen Quartetinho</b><span>Earshot Jazz, Seattle · 2022</span></figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="img/stage/cruise.jpg" alt="Tal Mashiach with Paquito D’Rivera &amp; friends, The Jazz Cruise · 2024" loading="lazy"></div><figcaption><b>With Paquito D’Rivera &amp; friends</b><span>The Jazz Cruise · 2024</span></figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="img/stage/gto-japan.jpg" alt="Tal Mashiach with the GTO Trio, Tokyo · 2024" loading="lazy"></div><figcaption><b>With the GTO Trio</b><span>Tokyo · 2024</span></figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="img/stage/bergamo.jpg" alt="Tal Mashiach with Anat Cohen Quartet, Bergamo Jazz Festival · 2016" loading="lazy"></div><figcaption><b>With Anat Cohen Quartet</b><span>Bergamo Jazz Festival · 2016</span></figcaption></figure>
+      <figure class="shot"><div class="ph"><img src="img/stage/redsea.jpg" alt="Tal Mashiach with the Tal Mashiach Quartet, Red Sea Jazz Festival · 2023" loading="lazy"></div><figcaption><b>With the Tal Mashiach Quartet</b><span>Red Sea Jazz Festival · 2023</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="music" id="music">
+    <div class="wrap">
+      <h2>Music</h2>
+      <p class="label music-h">As leader</p>
+      <div class="disco">
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/2uv1FvgJiEfPS0AjlblOZl" target="_blank" rel="noopener"><img src="img/cover.jpg" alt="Who’s Around? cover" loading="lazy"></a>
+        <figcaption><b>Who’s Around?</b><span>2026</span><span class="stream"><a href="https://open.spotify.com/album/2uv1FvgJiEfPS0AjlblOZl" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/whos-around/6815710306" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/0qpNwnAq2JjQiGE63JR1da" target="_blank" rel="noopener"><img src="img/covers/within.jpg" alt="Within cover" loading="lazy"></a>
+        <figcaption><b>Within</b><span>GTO Trio · 2025</span><span class="stream"><a href="https://open.spotify.com/album/0qpNwnAq2JjQiGE63JR1da" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/within-feat-gadi-lehavi-tal-mashiach-ofri-nehemya/6816061937" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/32dfSXH7JdvDUeRnzX2Pyl" target="_blank" rel="noopener"><img src="img/tiyul.jpg" alt="Tiyul cover" loading="lazy"></a>
+        <figcaption><b>Tiyul</b><span>2022</span><span class="stream"><a href="https://open.spotify.com/album/32dfSXH7JdvDUeRnzX2Pyl" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/tiyul/6816988608" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/6CTE59dXnM1ReYpVEzv8ES" target="_blank" rel="noopener"><img src="img/covers/fromtheroad.jpg" alt="From The Road cover" loading="lazy"></a>
+        <figcaption><b>From The Road</b><span>GTO Trio · 2018</span><span class="stream"><a href="https://open.spotify.com/album/6CTE59dXnM1ReYpVEzv8ES" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/from-the-road/1435350507" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/3f7Jr6hkv470Dr3P1nNO3J" target="_blank" rel="noopener"><img src="img/covers/sababito.jpg" alt="Sababito cover" loading="lazy"></a>
+        <figcaption><b>Sababito</b><span>TM Street Band · 2018</span><span class="stream"><a href="https://open.spotify.com/album/3f7Jr6hkv470Dr3P1nNO3J" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/sababito-ep/1341536690" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      </div>
+      <p class="label music-h">Featured on</p>
+      <div class="disco">
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/5tnvCNAHzg5R1vgk685oPL" target="_blank" rel="noopener"><img src="img/covers/triplehelix.jpg" alt="Triple Helix cover" loading="lazy"></a>
+        <figcaption><b>Triple Helix</b><span>Anat Cohen Tentet · 2019 · GRAMMY® nominated</span><span class="stream"><a href="https://open.spotify.com/album/5tnvCNAHzg5R1vgk685oPL" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/triple-helix/6819338059" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/1HCurquSxj0DRnHBcIGP72" target="_blank" rel="noopener"><img src="img/covers/quartetinho.jpg" alt="Quartetinho cover" loading="lazy"></a>
+        <figcaption><b>Quartetinho</b><span>Anat Cohen · 2022</span><span class="stream"><a href="https://open.spotify.com/album/1HCurquSxj0DRnHBcIGP72" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/quartetinho/6817880069" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/7rRBV0TY6WJm85o1tuxKjR" target="_blank" rel="noopener"><img src="img/covers/happysong.jpg" alt="Happy Song cover" loading="lazy"></a>
+        <figcaption><b>Happy Song</b><span>Anat Cohen Tentet · 2017</span><span class="stream"><a href="https://open.spotify.com/album/7rRBV0TY6WJm85o1tuxKjR" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/happy-song/6816985835" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/33AAW1NzFRQQVVnnr4CpVe" target="_blank" rel="noopener"><img src="img/covers/bloom.jpg" alt="Quartetinho: Bloom cover" loading="lazy"></a>
+        <figcaption><b>Quartetinho: Bloom</b><span>Anat Cohen · 2024</span><span class="stream"><a href="https://open.spotify.com/album/33AAW1NzFRQQVVnnr4CpVe" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/quartetinho-bloom-feat-james-shipp-vitor-gon%C3%A7alves/6816060297" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/4uraylBy6aqbY4yJ3Co6wz" target="_blank" rel="noopener"><img src="img/covers/guesthouse.jpg" alt="The Guesthouse cover" loading="lazy"></a>
+        <figcaption><b>The Guesthouse</b><span>Shai Maestro · 2026</span><span class="stream"><a href="https://open.spotify.com/album/4uraylBy6aqbY4yJ3Co6wz" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/the-guesthouse/1842362686" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/6JZTkAILyq8KJhj49kN9lC" target="_blank" rel="noopener"><img src="img/covers/ijamia.jpg" alt="Ija Mia cover" loading="lazy"></a>
+        <figcaption><b>Ija Mia</b><span>East of the River · 2024</span><span class="stream"><a href="https://open.spotify.com/album/6JZTkAILyq8KJhj49kN9lC" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/ija-mia-soundscape-of-the-sephardic-diaspora/1736760051" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/54pYKKIEzKgOa69LUtNKiO" target="_blank" rel="noopener"><img src="img/covers/unsettled.jpg" alt="Unsettled cover" loading="lazy"></a>
+        <figcaption><b>Unsettled</b><span>Gilad Barakan · 2026</span><span class="stream"><a href="https://open.spotify.com/album/54pYKKIEzKgOa69LUtNKiO" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/unsettled/1877701724" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/1zI51u2ufZxGgIA0DE8r1f" target="_blank" rel="noopener"><img src="img/covers/timetraveler.jpg" alt="Time Traveler cover" loading="lazy"></a>
+        <figcaption><b>Time Traveler</b><span>Ofri Nehemya · 2025</span><span class="stream"><a href="https://open.spotify.com/album/1zI51u2ufZxGgIA0DE8r1f" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/time-traveler/6804506728" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/07NsX6YlpRexjLYTq2th6R" target="_blank" rel="noopener"><img src="img/covers/dandi.jpg" alt="Dandi cover" loading="lazy"></a>
+        <figcaption><b>Dandi</b><span>Dandi · 2025 · co-producer</span><span class="stream"><a href="https://open.spotify.com/album/07NsX6YlpRexjLYTq2th6R" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/dandi/6804294583" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/4cyQsgmpW7qjtV5nrt5uOM" target="_blank" rel="noopener"><img src="img/covers/deliberations.jpg" alt="Deliberations cover" loading="lazy"></a>
+        <figcaption><b>Deliberations</b><span>Yotam Ben-Or · 2022</span><span class="stream"><a href="https://open.spotify.com/album/4cyQsgmpW7qjtV5nrt5uOM" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/deliberations-hitlabtuyot-ep/1616575863" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/6jh565TPZx9MV3hinoQJ0r" target="_blank" rel="noopener"><img src="img/covers/endless.jpg" alt="Endless cover" loading="lazy"></a>
+        <figcaption><b>Endless</b><span>Yotam Ben-Or · 2022</span><span class="stream"><a href="https://open.spotify.com/album/6jh565TPZx9MV3hinoQJ0r" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/endless-feat-alon-near-ep/1690646434" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/733J9r77ERw2FkSjeND3Tc" target="_blank" rel="noopener"><img src="img/covers/desayuno.jpg" alt="El Desayuno cover" loading="lazy"></a>
+        <figcaption><b>El Desayuno</b><span>El Vapor de Brooklyn · 2026</span><span class="stream"><a href="https://open.spotify.com/album/733J9r77ERw2FkSjeND3Tc" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/el-desayuno-live-at-barb%C3%A9s-live-single/6811533119" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/4GHTB7CYogSgK3s56yzLtI" target="_blank" rel="noopener"><img src="img/covers/caucasus.jpg" alt="Caucasus cover" loading="lazy"></a>
+        <figcaption><b>Caucasus</b><span>Khondzi · 2021</span><span class="stream"><a href="https://open.spotify.com/album/4GHTB7CYogSgK3s56yzLtI" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/caucasus-single/1561287434" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="watch" id="watch">
+    <div class="wrap">
+      <h2>Watch</h2>
+      <p class="label watch-h first" id="w-tal">Tal Mashiach</p>
+      <div class="vgrid three">
+      <a class="vid" data-yt="HG_zqwaQJs0" href="https://www.youtube.com/watch?v=HG_zqwaQJs0" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/HG_zqwaQJs0/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
+        <span class="cap">Titu</span>
+      </a>
+      <a class="vid" data-yt="D0_jBoESW1E" href="https://www.youtube.com/watch?v=D0_jBoESW1E" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/D0_jBoESW1E/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
+        <span class="cap">Titu · Live at Joe’s Pub</span>
+      </a>
+      <a class="vid" data-yt="7OE2GO7vxyw" href="https://www.youtube.com/watch?v=7OE2GO7vxyw" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/7OE2GO7vxyw/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
+        <span class="cap">Sheleg</span>
+      </a>
+      </div>
+      <p class="label watch-h" id="w-gto">GTO Trio · Live in Switzerland</p>
+      <div class="vgrid four">
+      <a class="vid" data-yt="rKD0FRUsa9k" href="https://www.youtube.com/watch?v=rKD0FRUsa9k" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/rKD0FRUsa9k/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
+        <span class="cap">Check the Bass</span>
+      </a>
+      <a class="vid" data-yt="lJUt1Cj86TA" href="https://www.youtube.com/watch?v=lJUt1Cj86TA" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/lJUt1Cj86TA/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
+        <span class="cap">Hashemesh Zorahat</span>
+      </a>
+      <a class="vid" data-yt="IXVBlS9CHfA" href="https://www.youtube.com/watch?v=IXVBlS9CHfA" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/IXVBlS9CHfA/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
+        <span class="cap">Abutbul’s Market</span>
+      </a>
+      <a class="vid" data-yt="Q7F69yKScDk" href="https://www.youtube.com/watch?v=Q7F69yKScDk" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/Q7F69yKScDk/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
+        <span class="cap">No Vowels Allowed</span>
+      </a>
+      </div>
+      <p class="label watch-h" id="w-tm">TM Street Band</p>
+      <div class="vgrid four">
+      <a class="vid" data-yt="rT3PVBpXumA" href="https://www.youtube.com/watch?v=rT3PVBpXumA" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/rT3PVBpXumA/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
+        <span class="cap">Rob’s New Jam · Live in Switzerland</span>
+      </a>
+      <a class="vid" data-yt="DIULIm7oyKI" href="https://www.youtube.com/watch?v=DIULIm7oyKI" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/DIULIm7oyKI/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
+        <span class="cap">Creta feat. Panagiotis Andreou</span>
+      </a>
+      <a class="vid" data-yt="lnnNjCpgugA" href="https://www.youtube.com/watch?v=lnnNjCpgugA" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/lnnNjCpgugA/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
+        <span class="cap">Pinto</span>
+      </a>
+      <a class="vid" data-yt="ZhxghhlneZE" href="https://www.youtube.com/watch?v=ZhxghhlneZE" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/ZhxghhlneZE/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
+        <span class="cap">Quartot</span>
+      </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap grid">
+      <img src="img/g/redwall-smile.jpg" alt="Tal Mashiach with a classical guitar by a red brick wall" loading="lazy">
+      <div class="text">
+        <h2>About</h2>
+        <p>Tal Mashiach is a Brooklyn-based multi-instrumentalist, composer and producer, on double bass and seven-string guitar.</p>
+        <p>For more than a decade he has played with Anat Cohen’s Quartetinho and Tentet, including the GRAMMY®-nominated <em>Triple Helix</em>. He has toured with Mulatu Astatke and Omer Avital, and co-leads the GTO Trio. His albums <em>Tiyul</em> and <em>Who’s Around?</em> are out on Anzic Records.</p>
+        <div class="quotes">
+          <blockquote><p>“Fun and intoxicating.”</p><cite>DownBeat</cite></blockquote>
+          <blockquote><p>“A grandly conceived, virtuosically played journey through time and the world.”</p><cite>AUDIO</cite></blockquote>
+          <blockquote><p>“Even more amazing was Tal’s bass solo.”</p><cite>JAZZ LIFE</cite></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="label" style="margin-bottom:14px">Booking &amp; press</p>
+      <a class="mail" href="mailto:mashiachtal@gmail.com">mashiachtal@gmail.com</a>
+      <ul class="social">
+        <li><a href="https://www.instagram.com/talmasaya/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.youtube.com/user/mashiacht" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://open.spotify.com/artist/49crDbUAQYzCIDimqy2vOD" target="_blank" rel="noopener">Spotify</a></li>
+        <li><a href="https://talmashiach.bandcamp.com" target="_blank" rel="noopener">Bandcamp</a></li>
+        <li><a href="https://www.facebook.com/Tal-Mashiach-Music-108480938323922" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer class="end">© 2026 Tal Mashiach</footer>
+
+<script>
+(function(){
+  var list=document.getElementById('upcoming'); if(!list) return;
+  var manual=[{"date": "2026-10-22", "venue": "JUNA", "city": "Brooklyn \u00b7 with Dandi", "with_": "With Dandi", "url": "https://www.instagram.com/juna.brooklyn/", "tix": "Venue"}, {"date": "2026-11-12", "venue": "Beth Emeth", "city": "Toronto \u00b7 with Deborah Sacks Mintz", "with_": "With Deborah Sacks Mintz", "url": "https://www.beby.org/event/beitmidrash", "tix": "Tickets"}];
+  var today=new Date(); today.setHours(0,0,0,0);
+  function render(items){
+    items=items.filter(function(e){return e.d>=today}).sort(function(a,b){return a.d-b.d});
+    if(!items.length) return;
+    list.innerHTML='';
+    items.forEach(function(e){
+      var li=document.createElement('li');
+      function sp(c,t){var s=document.createElement('span');s.className=c;s.textContent=t;return s}
+      li.appendChild(sp('date',e.d.toLocaleDateString('en-US',{month:'short',day:'numeric'})));
+      li.appendChild(sp('venue',e.venue));
+      li.appendChild(sp('city',e.city));
+      if(e.url){var a=document.createElement('a');a.className='tix';a.target='_blank';a.rel='noopener';a.href=e.url;a.textContent=e.tix||'Tickets';li.appendChild(a);}
+      else li.appendChild(sp('w',e.with_||''));
+      list.appendChild(li);
+    });
+  }
+  var items=manual.map(function(m){var p=m.date.split('-');return {d:new Date(+p[0],p[1]-1,+p[2]),venue:m.venue,city:m.city,with_:m.with_,url:m.url,tix:m.tix}});
+  render(items);
+  fetch('https://rest.bandsintown.com/artists/id_15496265/events?app_id=js_talmashiach.com&date=upcoming')
+    .then(function(r){return r.ok?r.json():[]})
+    .then(function(ev){
+      if(!Array.isArray(ev)||!ev.length) return;
+      ev.forEach(function(e){
+        var v=e.venue||{}, offer=(e.offers||[]).find(function(o){return o.type==='Tickets'})||(e.offers||[])[0];
+        var d=new Date(e.datetime);
+        if(items.some(function(x){return x.d.toDateString()===d.toDateString()})) return;
+        items.push({d:d,venue:v.name||e.title||'',city:[v.city,v.region||v.country].filter(Boolean).join(', '),url:(offer&&offer.url)||e.url,tix:offer?'Tickets':'Info'});
+      });
+      render(items);
+    }).catch(function(){});
+})();
+</script>
+<script>
+document.querySelectorAll('.vid[data-yt]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();a.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+a.dataset.yt+'?autoplay=1&rel=0" title="YouTube video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';},{once:true});});
+</script>
+</body>
+</html>

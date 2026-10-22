@@ -51,6 +51,17 @@ nav a:hover{color:var(--fg)}
 @media (max-width:700px){.hero .credit{display:block}}
 .hero .tag{z-index:1;position:absolute;left:0;right:0;bottom:clamp(20px,5vw,48px);text-align:center;color:#fff;font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;text-shadow:0 1px 12px rgba(0,0,0,.6)}
 
+@media (max-width:700px){.hero .tag span+span::before{content:" · "}}
+@media (min-width:701px){
+.hero{display:flex;justify-content:center;background:#171513;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-40px;background:url(img/g/studio-chair.jpg) center 40%/cover;filter:blur(28px) brightness(.45);transform:scale(1.1)}
+.hero picture{position:relative;z-index:1}
+.hero picture,.hero img{width:auto;height:clamp(520px,80vh,860px);aspect-ratio:2/3}
+.hero::after{z-index:1}
+.hero .tag{z-index:2}
+.hero .tag span+span::before{content:" · "}
+.hero .credit{display:block;z-index:2;right:12px;bottom:8px}
+}
 /* album */
 .album .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:center}
 .album .cover{display:block}
@@ -193,10 +204,9 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
 <main id="top">
   <section class="hero">
     <picture>
-      <source media="(max-width:700px)" srcset="img/g/studio-chair.jpg">
-      <img src="img/g/hero-floor.jpg" alt="Tal Mashiach on the floor with his double bass and classical guitar">
+      <img src="img/g/studio-chair.jpg" alt="Tal Mashiach in his studio with double bass, guitars and keyboard">
     </picture>
-    <p class="tag">Multi-instrumentalist · Composer · Producer</p>
+    <p class="tag"><span>Multi-instrumentalist</span><span>Composer</span><span>Producer</span></p>
     <p class="credit">Photo: Liri Agami</p>
   </section>
 

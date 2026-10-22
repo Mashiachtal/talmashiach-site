@@ -87,6 +87,14 @@ nav a:hover{color:var(--fg)}
 
 /* shows */
 .shows-h{margin:0 0 12px}
+.past{margin-top:28px}
+.past summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.past summary::-webkit-details-marker{display:none}
+.past summary::after{content:"+";font-size:1.1rem;line-height:1;color:var(--accent)}
+.past[open] summary::after{content:"−"}
+.past summary:hover{color:var(--fg)}
+.past ol{margin-top:12px}
+
 .list{list-style:none;margin:0 0 56px;padding:0;border-top:1px solid var(--fg)}
 .list li{display:grid;grid-template-columns:5rem minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.2fr);gap:4px 20px;padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline}
 .list .d,.list .date{font-size:.8rem;letter-spacing:.08em;color:var(--muted);font-variant-numeric:tabular-nums;text-transform:uppercase}
@@ -250,8 +258,9 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
       <ol class="list" id="upcoming">
         <li class="empty"><span>New dates soon.</span><a href="https://www.bandsintown.com/a/15496265" target="_blank" rel="noopener">Follow on Bandsintown</a></li>
       </ol>
-      <p class="label shows-h">Past</p>
-      <ol class="list">
+      <details class="past">
+        <summary class="label shows-h">Past shows</summary>
+        <ol class="list">
         <li><span class="d">2026</span><span class="v">Joe’s Pub</span><span class="c">New York</span><span class="w">Who’s Around? release</span></li>
         <li><span class="d">2024</span><span class="v">Carnegie Hall</span><span class="c">New York</span><span class="w">Anat Cohen Quartetinho</span></li>
         <li><span class="d">2024</span><span class="v">Hollywood Bowl</span><span class="c">Los Angeles</span><span class="w">Mulatu Astatke</span></li>
@@ -261,7 +270,8 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
         <li><span class="d">2022</span><span class="v">Jazz à Sète</span><span class="c">France</span><span class="w">Omer Avital</span></li>
         <li><span class="d">2022</span><span class="v">SFJAZZ</span><span class="c">San Francisco</span><span class="w">Anat Cohen Tentet</span></li>
         <li><span class="d">2018</span><span class="v">Monterey Jazz Festival</span><span class="c">California</span><span class="w">Anat Cohen Tentet</span></li>
-      </ol>
+        </ol>
+      </details>
     </div>
   </section>
 

@@ -156,6 +156,16 @@ nav a:hover{color:var(--fg)}
 .social{list-style:none;margin:36px 0 0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:8px 26px}
 .social a{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
 .social a:hover{color:var(--fg)}
+.news{max-width:560px;margin:56px auto 0;padding-top:40px;border-top:1px solid var(--line)}
+.news p.lead{font-family:var(--serif);font-size:1.08rem;color:var(--muted);margin:8px 0 20px}
+.news form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.news input{flex:1 1 160px;min-width:0;padding:13px 14px;font:inherit;font-size:.95rem;color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:0}
+.news input:focus{outline:none;border-color:var(--accent)}
+.news button{flex:0 0 auto;padding:13px 22px;font-family:var(--display);font-size:.9rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:var(--accent);border:0;cursor:pointer}
+.news button:hover{filter:brightness(1.1)}
+.news .ok{display:none;font-family:var(--serif);font-size:1.1rem}
+.news.sent form{display:none}.news.sent .ok{display:block}
+@media (max-width:520px){.news button{flex:1 1 100%}}
 footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
@@ -440,6 +450,17 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
         <li><a href="https://talmashiach.bandcamp.com" target="_blank" rel="noopener">Bandcamp</a></li>
         <li><a href="https://www.facebook.com/Tal-Mashiach-Music-108480938323922" target="_blank" rel="noopener">Facebook</a></li>
       </ul>
+      <div class="news" id="newsletter">
+        <p class="label">Mailing list</p>
+        <p class="lead">New music and shows, straight to your inbox.</p>
+        <form action="https://app.kit.com/forms/10083548/subscriptions" method="post" target="kit-sink" onsubmit="var n=this.parentNode;setTimeout(function(){n.className+=' sent'},400)">
+          <input type="text" name="fields[first_name]" placeholder="First name" aria-label="First name" autocomplete="given-name">
+          <input type="email" name="email_address" placeholder="Email" aria-label="Email" required autocomplete="email">
+          <button type="submit">Sign up</button>
+        </form>
+        <p class="ok">Thanks! Check your inbox to confirm.</p>
+        <iframe name="kit-sink" title="" hidden style="display:none"></iframe>
+      </div>
     </div>
   </section>
 </main>

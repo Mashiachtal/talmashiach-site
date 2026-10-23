@@ -44,10 +44,10 @@ nav a:hover{color:var(--fg)}
 
 /* hero */
 .hero{padding:0;position:relative}
-.hero picture,.hero img{display:block;width:100%;height:clamp(460px,78vh,820px);object-fit:cover;object-position:50% 8%}
+.hero picture,.hero img{display:block;width:100%;height:clamp(460px,78vh,820px);object-fit:cover;object-position:50% 13%}
 .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(transparent,rgba(0,0,0,.55));pointer-events:none}
 @media (max-width:700px){.hero img{object-position:60% 40%}}
-.hero .credit{display:none;z-index:1;position:absolute;right:10px;bottom:6px;margin:0;font-size:.6rem;letter-spacing:.08em;color:rgba(255,255,255,.75)}
+.hero .credit{display:block;z-index:1;position:absolute;right:10px;bottom:6px;margin:0;font-size:.6rem;letter-spacing:.08em;color:rgba(255,255,255,.75)}
 @media (max-width:700px){.hero .credit{display:block}}
 .hero .tag{z-index:1;position:absolute;left:0;right:0;bottom:clamp(20px,5vw,48px);text-align:center;color:#fff;font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;text-shadow:0 1px 12px rgba(0,0,0,.6)}
 
@@ -217,8 +217,7 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
 <main id="top">
   <section class="hero">
     <picture>
-      <source media="(max-width:700px)" srcset="img/g/studio-chair.jpg">
-      <img src="img/g/hero-red-v3.jpg" alt="Tal Mashiach smiling with his classical guitar by a red brick wall">
+      <img src="img/g/studio-chair.jpg" alt="Tal Mashiach in his studio with double bass, guitars and keyboard">
     </picture>
     <p class="tag"><span>Multi-instrumentalist</span><span>Composer</span><span>Producer</span></p>
     <p class="credit">Photo: Liri Agami</p>

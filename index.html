@@ -115,6 +115,18 @@ nav a:hover{color:var(--fg)}
 .shot figcaption{display:grid;gap:1px;margin-top:10px}
 .shot figcaption b{font-family:var(--display);font-weight:600;font-size:1.05rem;letter-spacing:.05em;text-transform:uppercase;line-height:1.2}
 .shot figcaption span{font-size:.8rem;color:var(--muted)}
+.shot .ph{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;background:#0b0b0b;padding:56px 64px 72px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;display:block;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.lb .cap{pointer-events:none;margin:0;position:absolute;left:0;right:0;bottom:18px;text-align:center;color:#eee;font-size:.85rem;padding:0 16px}
+.lb .cap b{font-family:var(--display);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-right:8px}
+.lb button{position:absolute;background:none;border:0;color:#fff;font-size:2.2rem;line-height:1;cursor:pointer;padding:12px;opacity:.8}
+.lb button:hover{opacity:1}
+.lb .x{top:8px;right:12px;font-size:2rem}
+.lb .pv{left:8px;top:50%;transform:translateY(-50%)}
+.lb .nx{right:8px;top:50%;transform:translateY(-50%)}
+@media (max-width:700px){.lb{padding:56px 8px 110px}.lb .cap{bottom:66px}.lb .pv,.lb .nx{top:auto;bottom:8px;transform:none;font-size:2.6rem}.lb .pv{left:24%}.lb .nx{right:24%}}
 @media (max-width:760px){.shots{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 /* music */
@@ -279,16 +291,16 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
     <div class="wrap">
       <h2>On stage</h2>
       <div class="shots">
-      <figure class="shot"><div class="ph"><img src="img/stage/carnegie.jpg" alt="Tal Mashiach with Anat Cohen Tentet, Carnegie Hall · 2019" loading="lazy"></div><figcaption><b>With Anat Cohen Tentet</b><span>Carnegie Hall · 2019</span></figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="img/stage/sete.jpg" alt="Tal Mashiach with Omer Avital, Jazz à Sète, France · 2022" loading="lazy"></div><figcaption><b>With Omer Avital</b><span>Jazz à Sète, France · 2022</span></figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="img/stage/mulatu-met.jpg" alt="Tal Mashiach with Mulatu Astatke, The Met, New York · 2016" loading="lazy"></div><figcaption><b>With Mulatu Astatke</b><span>The Met, New York · 2016</span></figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="img/stage/newport.jpg" alt="Tal Mashiach with Anat Cohen Quartetinho, Newport Jazz Festival · 2024" loading="lazy"></div><figcaption><b>With Anat Cohen Quartetinho</b><span>Newport Jazz Festival · 2024</span></figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="img/stage/shai-trio.jpg" alt="Tal Mashiach with the Shai Maestro Trio, Red Sea Jazz Festival · 2021" loading="lazy"></div><figcaption><b>With the Shai Maestro Trio</b><span>Red Sea Jazz Festival · 2021</span></figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="img/stage/earshot.jpg" alt="Tal Mashiach with Anat Cohen Quartetinho, Earshot Jazz, Seattle · 2022" loading="lazy"></div><figcaption><b>With Anat Cohen Quartetinho</b><span>Earshot Jazz, Seattle · 2022</span></figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="img/stage/cruise.jpg" alt="Tal Mashiach with Paquito D’Rivera &amp; friends, The Jazz Cruise · 2024" loading="lazy"></div><figcaption><b>With Paquito D’Rivera &amp; friends</b><span>The Jazz Cruise · 2024</span></figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="img/stage/gto-japan.jpg" alt="Tal Mashiach with the GTO Trio, Tokyo · 2024" loading="lazy"></div><figcaption><b>With the GTO Trio</b><span>Tokyo · 2024</span></figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="img/stage/bergamo.jpg" alt="Tal Mashiach with Anat Cohen Quartet, Bergamo Jazz Festival · 2016" loading="lazy"></div><figcaption><b>With Anat Cohen Quartet</b><span>Bergamo Jazz Festival · 2016</span></figcaption></figure>
-      <figure class="shot"><div class="ph"><img src="img/stage/redsea.jpg" alt="Tal Mashiach with the Tal Mashiach Quartet, Red Sea Jazz Festival · 2023" loading="lazy"></div><figcaption><b>With the Tal Mashiach Quartet</b><span>Red Sea Jazz Festival · 2023</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/carnegie.jpg" alt="Tal Mashiach with Anat Cohen Tentet, Carnegie Hall · 2019" loading="lazy"></div><figcaption><b>With Anat Cohen Tentet</b><span>Carnegie Hall · 2019</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/sete.jpg" alt="Tal Mashiach with Omer Avital, Jazz à Sète, France · 2022" loading="lazy"></div><figcaption><b>With Omer Avital</b><span>Jazz à Sète, France · 2022</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/mulatu-met.jpg" alt="Tal Mashiach with Mulatu Astatke, The Met, New York · 2016" loading="lazy"></div><figcaption><b>With Mulatu Astatke</b><span>The Met, New York · 2016</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/newport.jpg" alt="Tal Mashiach with Anat Cohen Quartetinho, Newport Jazz Festival · 2024" loading="lazy"></div><figcaption><b>With Anat Cohen Quartetinho</b><span>Newport Jazz Festival · 2024</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/shai-trio.jpg" alt="Tal Mashiach with the Shai Maestro Trio, Red Sea Jazz Festival · 2021" loading="lazy"></div><figcaption><b>With the Shai Maestro Trio</b><span>Red Sea Jazz Festival · 2021</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/earshot.jpg" alt="Tal Mashiach with Anat Cohen Quartetinho, Earshot Jazz, Seattle · 2022" loading="lazy"></div><figcaption><b>With Anat Cohen Quartetinho</b><span>Earshot Jazz, Seattle · 2022</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/cruise.jpg" alt="Tal Mashiach with Paquito D’Rivera &amp; friends, The Jazz Cruise · 2024" loading="lazy"></div><figcaption><b>With Paquito D’Rivera &amp; friends</b><span>The Jazz Cruise · 2024</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/gto-japan.jpg" alt="Tal Mashiach with the GTO Trio, Tokyo · 2024" loading="lazy"></div><figcaption><b>With the GTO Trio</b><span>Tokyo · 2024</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/bergamo.jpg" alt="Tal Mashiach with Anat Cohen Quartet, Bergamo Jazz Festival · 2016" loading="lazy"></div><figcaption><b>With Anat Cohen Quartet</b><span>Bergamo Jazz Festival · 2016</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/redsea.jpg" alt="Tal Mashiach with the Tal Mashiach Quartet, Red Sea Jazz Festival · 2023" loading="lazy"></div><figcaption><b>With the Tal Mashiach Quartet</b><span>Red Sea Jazz Festival · 2023</span></figcaption></figure>
       </div>
     </div>
   </section>
@@ -514,6 +526,28 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
       });
       render(items);
     }).catch(function(){});
+})();
+</script>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="x" aria-label="Close">×</button><button class="pv" aria-label="Previous">‹</button><img alt=""><button class="nx" aria-label="Next">›</button><p class="cap"></p></div>
+<script>
+(function(){
+  var shots=[].slice.call(document.querySelectorAll('.shot')); if(!shots.length) return;
+  var lb=document.getElementById('lb'), im=lb.querySelector('img'), cap=lb.querySelector('.cap'), i=0, last=null;
+  function show(n){ i=(n+shots.length)%shots.length; var f=shots[i], src=f.querySelector('img');
+    im.src=src.currentSrc||src.src; im.alt=src.alt; cap.innerHTML=f.querySelector('figcaption').innerHTML; }
+  function open(n){ last=document.activeElement; show(n); lb.classList.add('on'); document.body.style.overflow='hidden'; lb.querySelector('.x').focus(); }
+  function close(){ lb.classList.remove('on'); document.body.style.overflow=''; if(last) last.focus(); }
+  shots.forEach(function(f,n){ var ph=f.querySelector('.ph');
+    ph.addEventListener('click',function(){open(n)});
+    ph.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();open(n)} }); });
+  lb.querySelector('.x').onclick=close;
+  lb.querySelector('.pv').onclick=function(e){e.stopPropagation();show(i-1)};
+  lb.querySelector('.nx').onclick=function(e){e.stopPropagation();show(i+1)};
+  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown',function(e){ if(!lb.classList.contains('on')) return;
+    if(e.key==='Escape') close(); else if(e.key==='ArrowRight') show(i+1); else if(e.key==='ArrowLeft') show(i-1); });
+  var x0=null; lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){ if(x0===null) return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>50) show(i+(dx<0?1:-1)); x0=null; });
 })();
 </script>
 <script>

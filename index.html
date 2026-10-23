@@ -167,6 +167,8 @@ nav a:hover{color:var(--fg)}
 /* about */
 .about .grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,80px);align-items:start}
 .about img{width:100%;display:block}
+.aph{margin:0}
+.aph figcaption{margin-top:8px;font-size:.7rem;letter-spacing:.06em;color:var(--muted)}
 .about .text{display:grid;gap:18px;max-width:58ch}
 .about .text p{font-family:var(--serif);font-size:1.12rem;line-height:1.65}
 .quotes{display:grid;gap:22px;margin-top:20px;padding-top:28px;border-top:1px solid var(--line)}
@@ -462,7 +464,7 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
 
   <section class="about" id="about">
     <div class="wrap grid">
-      <img src="img/g/about-playground.jpg" alt="Tal Mashiach playing double bass in a Brooklyn playground" loading="lazy">
+      <figure class="aph"><img src="img/g/about-playground.jpg" alt="Tal Mashiach playing double bass in a Brooklyn playground" loading="lazy"><figcaption>Photo: Dylan Joseph</figcaption></figure>
       <div class="text">
         <h2>About</h2>
         <p>Tal Mashiach is a Brooklyn-based multi-instrumentalist, composer and producer, on double bass and seven-string guitar.</p>

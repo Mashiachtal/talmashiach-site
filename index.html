@@ -157,8 +157,10 @@ nav a:hover{color:var(--fg)}
 .watch-h{margin:44px 0 14px}
 .watch-h.first{margin-top:0}
 .reels{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,340px));gap:14px;justify-content:start}
-.reel{background:var(--card);border:1px solid var(--line)}
-.reel iframe{display:block;width:100%;height:600px;border:0;background:#fff}
+.reel{min-width:0}
+.reel .instagram-media{margin:0!important;min-width:0!important;width:100%!important;max-width:100%!important}
+.reel blockquote{margin:0;padding:28px 18px;background:var(--card);border:1px solid var(--line);text-align:center}
+.reel blockquote a{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fg)}
 #w-ig a{color:inherit}
 @media (max-width:700px){.reels{grid-template-columns:1fr;justify-content:stretch}}
 
@@ -467,10 +469,11 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
       </div>
       <p class="label watch-h" id="w-ig">On Instagram · <a href="https://www.instagram.com/talmasaya/" target="_blank" rel="noopener">@talmasaya</a></p>
       <div class="reels">
-        <div class="reel"><iframe src="https://www.instagram.com/reel/DS-BL4sjIyR/embed/" title="Instagram reel" loading="lazy" allowtransparency="true" scrolling="no" frameborder="0"></iframe></div>
-        <div class="reel"><iframe src="https://www.instagram.com/reel/Cj5hFbpAtCd/embed/" title="Instagram reel" loading="lazy" allowtransparency="true" scrolling="no" frameborder="0"></iframe></div>
-        <div class="reel"><iframe src="https://www.instagram.com/reel/Dd4ESa_RgsM/embed/" title="Instagram reel" loading="lazy" allowtransparency="true" scrolling="no" frameborder="0"></iframe></div>
+        <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DS-BL4sjIyR/" data-instgrm-version="14" data-instgrm-captioned><a href="https://www.instagram.com/reel/DS-BL4sjIyR/" target="_blank" rel="noopener">Watch this reel on Instagram</a></blockquote></div>
+        <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Cj5hFbpAtCd/" data-instgrm-version="14" data-instgrm-captioned><a href="https://www.instagram.com/reel/Cj5hFbpAtCd/" target="_blank" rel="noopener">Watch this reel on Instagram</a></blockquote></div>
+        <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Dd4ESa_RgsM/" data-instgrm-version="14" data-instgrm-captioned><a href="https://www.instagram.com/reel/Dd4ESa_RgsM/" target="_blank" rel="noopener">Watch this reel on Instagram</a></blockquote></div>
       </div>
+      <script async src="https://www.instagram.com/embed.js"></script>
     </div>
   </section>
 

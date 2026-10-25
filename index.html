@@ -156,13 +156,13 @@ nav a:hover{color:var(--fg)}
 .vid .cap{position:absolute;left:14px;bottom:12px;color:#fff;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.7)}
 .watch-h{margin:44px 0 14px}
 .watch-h.first{margin-top:0}
-.reels{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,340px));gap:14px;justify-content:start}
-.reel{min-width:0}
-.reel .instagram-media{margin:0!important;min-width:0!important;width:100%!important;max-width:100%!important}
+.reels{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+.reel{flex:0 0 240px;scroll-snap-align:start;min-width:0}
+.reel .instagram-media,.reel iframe{margin:0!important;min-width:0!important;width:100%!important;max-width:100%!important}
 .reel blockquote{margin:0;padding:28px 18px;background:var(--card);border:1px solid var(--line);text-align:center}
 .reel blockquote a{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fg)}
 #w-ig a{color:inherit}
-@media (max-width:700px){.reels{grid-template-columns:1fr;justify-content:stretch}}
+@media (max-width:700px){.reel{flex-basis:72%}}
 
 .vgrid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:900px){.vgrid.three{grid-template-columns:1fr}}
@@ -469,9 +469,9 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
       </div>
       <p class="label watch-h" id="w-ig">On Instagram · <a href="https://www.instagram.com/talmasaya/" target="_blank" rel="noopener">@talmasaya</a></p>
       <div class="reels">
-        <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DS-BL4sjIyR/" data-instgrm-version="14" data-instgrm-captioned><a href="https://www.instagram.com/reel/DS-BL4sjIyR/" target="_blank" rel="noopener">Watch this reel on Instagram</a></blockquote></div>
-        <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Cj5hFbpAtCd/" data-instgrm-version="14" data-instgrm-captioned><a href="https://www.instagram.com/reel/Cj5hFbpAtCd/" target="_blank" rel="noopener">Watch this reel on Instagram</a></blockquote></div>
-        <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Dd4ESa_RgsM/" data-instgrm-version="14" data-instgrm-captioned><a href="https://www.instagram.com/reel/Dd4ESa_RgsM/" target="_blank" rel="noopener">Watch this reel on Instagram</a></blockquote></div>
+        <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DS-BL4sjIyR/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DS-BL4sjIyR/" target="_blank" rel="noopener">Watch this reel on Instagram</a></blockquote></div>
+        <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Cj5hFbpAtCd/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/Cj5hFbpAtCd/" target="_blank" rel="noopener">Watch this reel on Instagram</a></blockquote></div>
+        <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Dd4ESa_RgsM/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/Dd4ESa_RgsM/" target="_blank" rel="noopener">Watch this reel on Instagram</a></blockquote></div>
       </div>
       <script async src="https://www.instagram.com/embed.js"></script>
     </div>

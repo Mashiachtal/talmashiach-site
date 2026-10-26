@@ -183,6 +183,29 @@ nav a:hover{color:var(--fg)}
 .more[open] summary{margin-bottom:18px}
 .more p{font-family:var(--serif);font-size:1.12rem;line-height:1.65;margin:0 0 18px}
 .credo{margin:6px 0 0;padding-left:16px;border-left:2px solid var(--accent);font-family:var(--serif);font-style:italic;font-size:1.1rem;line-height:1.55}
+.press{border-top:1px solid var(--line)}
+.press-sub{color:var(--muted);margin:-24px 0 28px;max-width:60ch}
+.press-names{padding-block:0 36px}
+.press-names ul{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 28px;font-family:var(--display);font-weight:600;font-size:clamp(1.15rem,2.2vw,1.55rem);text-transform:uppercase;color:var(--muted)}
+.press-names li b{color:var(--fg);font-weight:600}
+.qgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.q{margin:0;padding:22px 22px 18px;background:var(--card);display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.q.big{grid-column:span 1}
+.q blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:1.12rem;line-height:1.5}
+.q.big blockquote{font-size:1.25rem}
+.q footer{display:grid;gap:2px}
+.q footer b{font-family:var(--display);font-weight:600;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase}
+.pmore{margin-top:22px}
+.pmore summary,.bio-links a{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:10px;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fg);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:4px}
+.pmore summary::-webkit-details-marker{display:none}
+.pmore summary::after{content:"+";color:var(--accent);font-size:1rem;line-height:1}
+.pmore[open] summary::after{content:"−"}
+.pmore[open] summary{margin-bottom:22px}
+.bio-links{display:flex;gap:28px;margin-top:6px;flex-wrap:wrap}
+.about .text .bio-links a{font-family:var(--sans);font-size:.75rem}
+.bio-links a::after{content:"→";color:var(--accent)}
+@media (max-width:900px){.qgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.qgrid{grid-template-columns:1fr}}
 .aph{margin:0}
 .aph figcaption{margin-top:8px;font-size:.7rem;letter-spacing:.06em;color:var(--muted)}
 .about .text{display:grid;gap:18px;max-width:58ch}
@@ -225,7 +248,7 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
     <a class="brand" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'',location.pathname);return false">Tal Mashiach</a>
     <nav aria-label="Main"><ul>
       <li><a href="#music">Music</a></li><li><a href="#projects">Projects</a></li><li><a href="#shows">Shows</a></li><li><a href="#stage">On stage</a></li>
-      <li><a href="#watch">Watch</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li>
+      <li><a href="#watch">Watch</a></li><li><a href="#about">About</a></li><li><a href="#press">Press</a></li><li><a href="#contact">Contact</a></li>
     </ul></nav>
   </div>
 </header>
@@ -493,20 +516,73 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
         <p>Tal Mashiach is a GRAMMY®-nominated multi-instrumentalist, composer and producer based in Brooklyn, New York, on double bass and seven-string guitar.</p>
         <p>For more than a decade he has played with Anat Cohen’s Quartetinho and Tentet, including the GRAMMY®-nominated <em>Triple Helix</em>. He has toured with Mulatu Astatke and Omer Avital, and co-leads the GTO Trio.</p>
         <p>His new album <em>Who’s Around?</em> (Anzic Records, 2026) brings together sixteen musicians, with Anat Cohen, Gadi Lehavi and Ofri Nehemya. It was a DownBeat Editors’ Pick, hailed as “masterfully executed world fusion.”</p>
-        <details class="more">
-          <summary>Read full bio</summary>
-          <p>Born in 1993, Tal studied classical guitar from the age of ten and took up the double bass at seventeen. At eighteen he won first prize at the national guitar competition of the Jerusalem Academy of Music and Dance, and he received annual scholarships from the America-Israel Cultural Foundation for classical and jazz studies.</p>
-          <p>In 2015 he moved to New York on a full scholarship to The New School. Since then he has performed and recorded with Anat Cohen, Avishai Cohen, Mulatu Astatke, Jeff Ballard, Nasheet Waits, Jason Lindner, Ravi Coltrane, Justin Brown, Shai Maestro and Omer Avital, at venues including Carnegie Hall, the Hollywood Bowl, Blue Note New York, Lincoln Center, the Newport Jazz Festival, SFJAZZ, Umbria Jazz, the Montreal Jazz Festival and Pit Inn Tokyo.</p>
-          <p>As a bandleader he has built projects that reflect his wide musical world. <strong>GTO Trio</strong>, a contemporary jazz trio co-led with pianist Gadi Lehavi and drummer Ofri Nehemya, has toured Japan and Europe, played Blue Note New York and headlined the Jerusalem Jazz Festival. <strong>TM Street Band</strong> is a funky, borderless world-music party band that has toured Europe and plays regularly in New York clubs.</p>
-          <p>His debut album <em>Tiyul</em> (Anzic Records, 2022) is an intimate set of original compositions for classical guitar. <em>Who’s Around?</em> (Anzic Records, 2026) widens the circle to sixteen musicians from Israel, Greece, Georgia, Puerto Rico, Venezuela and Chile, moving between jazz, Greek zeibekiko, Brazilian samba, flamenco and classical music. Released in June 2026 with an album-release show at Joe’s Pub, it was named a DownBeat Editors’ Pick and a FIP Album of the Week.</p>
-          <blockquote class="credo">“I see music as a way of living, communicating and connecting between people at the deepest level. The power music has to empower and liberate people amazes me every time. It inspires me to keep creating and spreading this form of love.”</blockquote>
-        </details>
-        <div class="quotes">
-          <blockquote><p>“Fun and intoxicating.”</p><cite>DownBeat</cite></blockquote>
-          <blockquote><p>“A grandly conceived, virtuosically played journey through time and the world.”</p><cite>AUDIO</cite></blockquote>
-          <blockquote><p>“Even more amazing was Tal’s bass solo.”</p><cite>JAZZ LIFE</cite></blockquote>
+        <p class="bio-links"><a href="/bio/">Read full bio</a><a href="#press">Press</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="press" id="press">
+    <div class="wrap">
+      <h2>Press</h2>
+      <p class="press-sub">Reviews and features from the US, UK, France, Germany, Norway, Georgia, Japan and Belgium.</p>
+      <div class="press-names" aria-label="Featured in">
+        <span class="label">Featured in</span>
+        <ul>
+          <li><b>The Guardian</b></li><li><b>DownBeat</b></li><li><b>Billboard</b></li><li><b>FIP · Radio France</b></li>
+          <li>AUDIO (DE)</li><li>All About Jazz</li><li>Jazz Guitar Today</li><li>Nettavisen</li><li>Bremen Zwei</li>
+          <li>Jazz Weekly</li><li>JAZZ LIFE (JP)</li><li>Jazzism</li><li>The Arts Fuse</li><li>Audiophile Audition</li>
+        </ul>
+      </div>
+      <div class="qgrid">
+        <div class="q big">
+          <blockquote>Virtuoso guitarist/bassist… a songlike composing skill on the captivating <em>Who’s Around?</em></blockquote>
+          <footer><b>The Guardian</b><span class="label">July 2026</span></footer>
+        </div>
+        <div class="q big">
+          <blockquote>Israeli, Brazilian, Greek, Georgian, Spanish and Puerto Rican sounds all find a place on guitarist/bassist Tal Mashiach’s second album… fun and intoxicating.</blockquote>
+          <footer><b>DownBeat</b><span class="label">Michael J. West · Editors’ Pick</span></footer>
+        </div>
+        <div class="q">
+          <blockquote>A grandly conceived, virtuosically played journey through time and the world.</blockquote>
+          <footer><b>AUDIO</b><span class="label">Germany · translated</span></footer>
+        </div>
+        <div class="q">
+          <blockquote>Melody after melody after melody. This one might become a summertime staple.</blockquote>
+          <footer><b>Jim Macnie</b><span class="label">Lament for a Straight Line</span></footer>
+        </div>
+        <div class="q">
+          <blockquote>A bright and bouncing samba with a melody played just a fraction behind the beat to give it momentum.</blockquote>
+          <footer><b>The Arts Fuse</b><span class="label">On “Titu” feat. Anat Cohen</span></footer>
+        </div>
+        <div class="q">
+          <blockquote>A virtuoso, seeking and finding soul who has created a musical universe across a great many things.</blockquote>
+          <footer><b>Nettavisen</b><span class="label">Norway · translated</span></footer>
         </div>
       </div>
+      <details class="pmore"><summary>More press</summary>
+      <div class="qgrid">
+        <div class="q">
+          <blockquote>Even more amazing was Tal’s bass solo… the contrast was stunning, eliciting a roar of applause.</blockquote>
+          <footer><b>JAZZ LIFE</b><span class="label">Japan · GTO Trio at Body &amp; Soul</span></footer>
+        </div>
+        <div class="q">
+          <blockquote>Tal Mashiach’s warm, round bass is the quiet anchor for everything.</blockquote>
+          <footer><b>DownBeat</b><span class="label">On Anat Cohen’s Quartetinho</span></footer>
+        </div>
+        <div class="q">
+          <blockquote>A delicate, impeccably fingered solo by Mashiach that showed he had caught the evening’s inspiration.</blockquote>
+          <footer><b>The Washington Post</b><span class="label">Michael J. West · Anat Cohen Quartet, DC Jazz Festival</span></footer>
+        </div>
+        <div class="q big">
+          <blockquote>Relatively few contemporary musicians have made [nylon-string guitar] their primary voice. Rarer still is a player equally at home on the upright bass. Brooklyn-based Tal Mashiach is one of them.</blockquote>
+          <footer><b>The Eclectic Guitar</b><span class="label">Adam Perlmutter · interview</span></footer>
+        </div>
+        <div class="q">
+          <blockquote>Acoustic bassist Tal Mashiach took flight with rhythmic fluency.</blockquote>
+          <footer><b>All About Jazz</b><span class="label">Anat Cohen Tentet at SFJAZZ</span></footer>
+        </div>
+      </div>
+      </details>
     </div>
   </section>
 

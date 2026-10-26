@@ -52,6 +52,10 @@ nav a:hover{color:var(--fg)}
 .hero .tag{z-index:1;position:absolute;left:0;right:0;bottom:clamp(20px,5vw,48px);text-align:center;color:#fff;font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;text-shadow:0 1px 12px rgba(0,0,0,.6)}
 
 .hero .tag span+span::before{content:" · "}
+.hero .tag span{white-space:nowrap}
+.hero .tag .g{display:block;margin-bottom:6px;color:#fff;font-weight:600}
+.hero .tag .g+span::before{content:none}
+@media (max-width:420px){.hero .tag{letter-spacing:.14em;font-size:.68rem;padding:0 10px}}
 /* album */
 .album .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:center}
 .album .cover{display:block}
@@ -206,6 +210,16 @@ nav a:hover{color:var(--fg)}
 .bio-links a::after{content:"→";color:var(--accent)}
 @media (max-width:900px){.qgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.qgrid{grid-template-columns:1fr}}
+.nav-book{color:var(--accent)!important;font-weight:600}
+.aq{margin:22px 0 26px;padding-left:16px;border-left:2px solid var(--accent);font-family:var(--serif);font-style:italic;font-size:1.2rem;line-height:1.45;max-width:34ch}
+.aq cite{display:block;margin-top:8px;font-family:var(--sans);font-style:normal;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.creds{padding-block:0 clamp(48px,7vw,88px)}
+.creds .in{display:grid;gap:16px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:24px}
+.cr{display:grid;grid-template-columns:90px 1fr;gap:16px;align-items:baseline}
+.cr p{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(.98rem,1.6vw,1.2rem);letter-spacing:.06em;text-transform:uppercase;line-height:1.5}
+@media (max-width:600px){.cr{grid-template-columns:1fr;gap:4px}}
+.amore{margin-top:8px}
+.amore[open] summary{margin-bottom:24px}
 .aph{margin:0}
 .aph figcaption{margin-top:8px;font-size:.7rem;letter-spacing:.06em;color:var(--muted)}
 .about .text{display:grid;gap:18px;max-width:58ch}
@@ -247,8 +261,8 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
   <div class="wrap">
     <a class="brand" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'',location.pathname);return false">Tal Mashiach</a>
     <nav aria-label="Main"><ul>
-      <li><a href="#music">Music</a></li><li><a href="#projects">Projects</a></li><li><a href="#shows">Shows</a></li><li><a href="#stage">On stage</a></li>
-      <li><a href="#watch">Watch</a></li><li><a href="#about">About</a></li><li><a href="#press">Press</a></li><li><a href="#contact">Contact</a></li>
+      <li><a href="#stage">On stage</a></li><li><a href="#watch">Watch</a></li><li><a href="#press">Press</a></li><li><a href="#projects">Projects</a></li>
+      <li><a href="#shows">Shows</a></li><li><a href="#music">Music</a></li><li><a href="#about">About</a></li><li><a class="nav-book" href="#contact">Booking</a></li>
     </ul></nav>
   </div>
 </header>
@@ -259,7 +273,7 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
       <source media="(max-width:700px)" srcset="img/g/studio-chair.jpg">
       <img src="img/g/hero-red-v3.jpg" alt="Tal Mashiach smiling with his classical guitar by a red brick wall">
     </picture>
-    <p class="tag"><span>Multi-instrumentalist</span><span>Composer</span><span>Producer</span></p>
+    <p class="tag"><span class="g">GRAMMY®-nominated</span><span>Multi-instrumentalist</span><span>Composer</span><span>Producer</span></p>
     <p class="credit">Photo: Liri Agami</p>
   </section>
 
@@ -270,6 +284,7 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
         <span class="label">New album · Anzic Records</span>
         <h2>Who’s Around?</h2>
         <p class="sub">DownBeat Editors’ Pick · FIP Album of the Week</p>
+        <blockquote class="aq">“Virtuoso guitarist/bassist… a songlike composing skill on the captivating <em>Who’s Around?</em>”<cite>The Guardian</cite></blockquote>
         <div class="btns">
           <a class="btn solid" href="https://open.spotify.com/album/2uv1FvgJiEfPS0AjlblOZl" target="_blank" rel="noopener">Spotify</a>
           <a class="btn" href="https://music.apple.com/us/album/whos-around/6815710306" target="_blank" rel="noopener">Apple Music</a>
@@ -279,165 +294,32 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
     </div>
   </section>
 
-  <section class="projects" id="projects">
-    <div class="wrap">
-      <h2>Projects</h2>
-      <div class="pgrid">
-        <article class="proj">
-          <a class="ph" href="#w-tal"><img src="img/stage/joespub-wide.jpg" alt="Who’s Around? album release show at Joe’s Pub" loading="lazy"></a>
-          <h3>Who’s Around?</h3>
-          <p>A new album of original music for a sixteen-piece ensemble. Out now on Anzic Records.</p>
-          <p class="links"><a href="#w-tal">Watch</a><a href="https://open.spotify.com/album/2uv1FvgJiEfPS0AjlblOZl" target="_blank" rel="noopener">Spotify</a></p>
-        </article>
-        <article class="proj">
-          <a class="ph" href="#w-tal"><img src="img/g/pink-guitar.jpg" alt="Tal Mashiach with his classical guitar" loading="lazy"></a>
-          <h3>Tiyul</h3>
-          <p>Tal’s debut album as a leader, built around the nylon-string guitar. Out on Anzic Records.</p>
-          <p class="links"><a href="#w-tal">Watch</a><a href="https://open.spotify.com/album/32dfSXH7JdvDUeRnzX2Pyl" target="_blank" rel="noopener">Spotify</a></p>
-        </article>
-        <article class="proj">
-          <a class="ph" href="#w-gto"><img src="img/stage/gto-redcar.jpg" alt="GTO Trio: Gadi Lehavi, Tal Mashiach and Ofri Nehemya" loading="lazy"><span class="pcredit">Photo: Gaya Photos</span></a>
-          <h3>GTO Trio</h3>
-          <p>With Gadi Lehavi and Ofri Nehemya. Two albums and sold-out tours in Japan and Europe.</p>
-          <p class="links"><a href="#w-gto">Watch</a><a href="https://open.spotify.com/album/0qpNwnAq2JjQiGE63JR1da" target="_blank" rel="noopener">Spotify</a></p>
-        </article>
-        <article class="proj">
-          <a class="ph" href="#w-tm"><img src="img/stage/tmsb-jump.jpg" alt="TM Street Band jumping in a New York street" loading="lazy"></a>
-          <h3>TM Street Band</h3>
-          <p>A Brooklyn street band of horns, harmonica and groove. Debut album <em>Sababito</em>.</p>
-          <p class="links"><a href="#w-tm">Watch</a><a href="https://open.spotify.com/album/3f7Jr6hkv470Dr3P1nNO3J" target="_blank" rel="noopener">Spotify</a></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="shows" id="shows">
-    <div class="wrap">
-      <h2>Shows</h2>
-      <p class="label shows-h">Upcoming</p>
-      <ol class="list" id="upcoming">
-        <li class="empty"><span>New dates soon.</span><a href="https://www.bandsintown.com/a/15496265" target="_blank" rel="noopener">Follow on Bandsintown</a></li>
-      </ol>
-      <details class="past">
-        <summary class="label shows-h">Past shows</summary>
-        <ol class="list">
-        <li><span class="d">2026</span><span class="v">Joe’s Pub</span><span class="c">New York</span><span class="w">Who’s Around? release</span></li>
-        <li><span class="d">2024</span><span class="v">Carnegie Hall</span><span class="c">New York</span><span class="w">Anat Cohen Quartetinho</span></li>
-        <li><span class="d">2024</span><span class="v">Hollywood Bowl</span><span class="c">Los Angeles</span><span class="w">Mulatu Astatke</span></li>
-        <li><span class="d">2024</span><span class="v">Newport Jazz Festival</span><span class="c">Newport, RI</span><span class="w">Anat Cohen Quartetinho</span></li>
-        <li><span class="d">2024</span><span class="v">Body &amp; Soul</span><span class="c">Tokyo</span><span class="w">GTO Trio</span></li>
-        <li><span class="d">2023</span><span class="v">Red Sea Jazz Festival</span><span class="c">Eilat</span><span class="w">Tal Mashiach Quartet</span></li>
-        <li><span class="d">2022</span><span class="v">Jazz à Sète</span><span class="c">France</span><span class="w">Omer Avital</span></li>
-        <li><span class="d">2022</span><span class="v">SFJAZZ</span><span class="c">San Francisco</span><span class="w">Anat Cohen Tentet</span></li>
-        <li><span class="d">2018</span><span class="v">Monterey Jazz Festival</span><span class="c">California</span><span class="w">Anat Cohen Tentet</span></li>
-        </ol>
-      </details>
-    </div>
+  <section class="creds" aria-label="Highlights">
+    <div class="wrap"><div class="in">
+      <div class="cr"><span class="label">Stages</span><p>Carnegie Hall · Hollywood Bowl · Newport Jazz Festival · Lincoln Center · Blue Note New York · SFJAZZ · Monterey Jazz Festival · Umbria Jazz</p></div>
+      <div class="cr"><span class="label">With</span><p>Anat Cohen · Mulatu Astatke · Omer Avital · Shai Maestro · Paquito D’Rivera · Avishai Cohen · Ravi Coltrane</p></div>
+    </div></div>
   </section>
 
   <section class="stage" id="stage">
     <div class="wrap">
       <h2>On stage</h2>
       <div class="shots">
-      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/carnegie.jpg" alt="Tal Mashiach with Anat Cohen Tentet, Carnegie Hall · 2019" loading="lazy"></div><figcaption><b>With Anat Cohen Tentet</b><span>Carnegie Hall · 2019</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/carnegie.jpg" alt="Tal Mashiach with the Anat Cohen Tentet, Carnegie Hall · 2019" loading="lazy"></div><figcaption><b>With the Anat Cohen Tentet</b><span>Carnegie Hall · 2019</span></figcaption></figure>
       <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/sete.jpg" alt="Tal Mashiach with Omer Avital, Jazz à Sète, France · 2022" loading="lazy"></div><figcaption><b>With Omer Avital</b><span>Jazz à Sète, France · 2022</span></figcaption></figure>
       <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/mulatu-met.jpg" alt="Tal Mashiach with Mulatu Astatke, The Met, New York · 2016" loading="lazy"></div><figcaption><b>With Mulatu Astatke</b><span>The Met, New York · 2016</span></figcaption></figure>
-      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/newport.jpg" alt="Tal Mashiach with Anat Cohen Quartetinho, Newport Jazz Festival · 2024" loading="lazy"></div><figcaption><b>With Anat Cohen Quartetinho</b><span>Newport Jazz Festival · 2024</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/newport.jpg" alt="Tal Mashiach with Anat Cohen’s Quartetinho, Newport Jazz Festival · 2024" loading="lazy"></div><figcaption><b>With Anat Cohen’s Quartetinho</b><span>Newport Jazz Festival · 2024</span></figcaption></figure>
       <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/shai-trio.jpg" alt="Tal Mashiach with the Shai Maestro Trio, Red Sea Jazz Festival · 2021" loading="lazy"></div><figcaption><b>With the Shai Maestro Trio</b><span>Red Sea Jazz Festival · 2021</span></figcaption></figure>
-      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/earshot.jpg" alt="Tal Mashiach with Anat Cohen Quartetinho, Earshot Jazz, Seattle · 2022" loading="lazy"></div><figcaption><b>With Anat Cohen Quartetinho</b><span>Earshot Jazz, Seattle · 2022</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/earshot.jpg" alt="Tal Mashiach with Anat Cohen’s Quartetinho, Earshot Jazz, Seattle · 2022" loading="lazy"></div><figcaption><b>With Anat Cohen’s Quartetinho</b><span>Earshot Jazz, Seattle · 2022</span></figcaption></figure>
       <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/cruise.jpg" alt="Tal Mashiach with Paquito D’Rivera &amp; friends, The Jazz Cruise · 2024" loading="lazy"></div><figcaption><b>With Paquito D’Rivera &amp; friends</b><span>The Jazz Cruise · 2024</span></figcaption></figure>
       <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/gto-japan.jpg" alt="Tal Mashiach with the GTO Trio, Tokyo · 2024" loading="lazy"></div><figcaption><b>With the GTO Trio</b><span>Tokyo · 2024</span></figcaption></figure>
-      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/bergamo.jpg" alt="Tal Mashiach with Anat Cohen Quartet, Bergamo Jazz Festival · 2016" loading="lazy"></div><figcaption><b>With Anat Cohen Quartet</b><span>Bergamo Jazz Festival · 2016</span></figcaption></figure>
+      <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/bergamo.jpg" alt="Tal Mashiach with the Anat Cohen Quartet, Bergamo Jazz Festival · 2016" loading="lazy"></div><figcaption><b>With the Anat Cohen Quartet</b><span>Bergamo Jazz Festival · 2016</span></figcaption></figure>
       <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/redsea.jpg" alt="Tal Mashiach with the Tal Mashiach Quartet, Red Sea Jazz Festival · 2023" loading="lazy"></div><figcaption><b>With the Tal Mashiach Quartet</b><span>Red Sea Jazz Festival · 2023</span></figcaption></figure>
       <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/monterey.jpg" alt="Tal Mashiach with the Anat Cohen Tentet, Monterey Jazz Festival · 2018" loading="lazy"></div><figcaption><b>With the Anat Cohen Tentet</b><span>Monterey Jazz Festival · 2018</span></figcaption></figure>
       <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/tmsb.jpg" alt="Tal Mashiach with the TM Street Band, New York" loading="lazy"></div><figcaption><b>With the TM Street Band</b><span>New York</span></figcaption></figure>
       <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/dandi.jpg" alt="Tal Mashiach with Dandi, Earth Sky Time, Vermont · 2024" loading="lazy"></div><figcaption><b>With Dandi</b><span>Earth Sky Time, Vermont · 2024</span></figcaption></figure>
       <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/khondzi-nublu.jpg" alt="Tal Mashiach with Khondzi, Nublu, New York" loading="lazy"></div><figcaption><b>With Khondzi</b><span>Nublu, New York</span></figcaption></figure>
       <figure class="shot"><div class="ph" role="button" tabindex="0" aria-label="Enlarge photo"><img src="img/stage/duc-lombards.jpg" alt="Tal Mashiach at Duc des Lombards, Paris" loading="lazy" style="object-position:50% 82%"></div><figcaption><b>At Duc des Lombards</b><span>Paris</span></figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="music" id="music">
-    <div class="wrap">
-      <h2>Music</h2>
-      <p class="label music-h">As leader</p>
-      <div class="disco">
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/2uv1FvgJiEfPS0AjlblOZl" target="_blank" rel="noopener"><img src="img/cover.jpg" alt="Who’s Around? cover" loading="lazy"></a>
-        <figcaption><b>Who’s Around?</b><span>2026</span><span class="stream"><a href="https://open.spotify.com/album/2uv1FvgJiEfPS0AjlblOZl" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/whos-around/6815710306" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/0qpNwnAq2JjQiGE63JR1da" target="_blank" rel="noopener"><img src="img/covers/within.jpg" alt="Within cover" loading="lazy"></a>
-        <figcaption><b>Within</b><span>GTO Trio · 2025</span><span class="stream"><a href="https://open.spotify.com/album/0qpNwnAq2JjQiGE63JR1da" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/within-feat-gadi-lehavi-tal-mashiach-ofri-nehemya/6816061937" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/32dfSXH7JdvDUeRnzX2Pyl" target="_blank" rel="noopener"><img src="img/tiyul.jpg" alt="Tiyul cover" loading="lazy"></a>
-        <figcaption><b>Tiyul</b><span>2022</span><span class="stream"><a href="https://open.spotify.com/album/32dfSXH7JdvDUeRnzX2Pyl" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/tiyul/6816988608" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/6CTE59dXnM1ReYpVEzv8ES" target="_blank" rel="noopener"><img src="img/covers/fromtheroad.jpg" alt="From The Road cover" loading="lazy"></a>
-        <figcaption><b>From The Road</b><span>GTO Trio · 2018</span><span class="stream"><a href="https://open.spotify.com/album/6CTE59dXnM1ReYpVEzv8ES" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/from-the-road/1435350507" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/3f7Jr6hkv470Dr3P1nNO3J" target="_blank" rel="noopener"><img src="img/covers/sababito.jpg" alt="Sababito cover" loading="lazy"></a>
-        <figcaption><b>Sababito</b><span>TM Street Band · 2018</span><span class="stream"><a href="https://open.spotify.com/album/3f7Jr6hkv470Dr3P1nNO3J" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/sababito-ep/1341536690" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      </div>
-      <p class="label music-h">Featured on</p>
-      <div class="disco">
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/5tnvCNAHzg5R1vgk685oPL" target="_blank" rel="noopener"><img src="img/covers/triplehelix.jpg" alt="Triple Helix cover" loading="lazy"></a>
-        <figcaption><b>Triple Helix</b><span>Anat Cohen Tentet · 2019 · GRAMMY® nominated</span><span class="stream"><a href="https://open.spotify.com/album/5tnvCNAHzg5R1vgk685oPL" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/triple-helix/6819338059" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/1HCurquSxj0DRnHBcIGP72" target="_blank" rel="noopener"><img src="img/covers/quartetinho.jpg" alt="Quartetinho cover" loading="lazy"></a>
-        <figcaption><b>Quartetinho</b><span>Anat Cohen · 2022</span><span class="stream"><a href="https://open.spotify.com/album/1HCurquSxj0DRnHBcIGP72" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/quartetinho/6817880069" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/7rRBV0TY6WJm85o1tuxKjR" target="_blank" rel="noopener"><img src="img/covers/happysong.jpg" alt="Happy Song cover" loading="lazy"></a>
-        <figcaption><b>Happy Song</b><span>Anat Cohen Tentet · 2017</span><span class="stream"><a href="https://open.spotify.com/album/7rRBV0TY6WJm85o1tuxKjR" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/happy-song/6816985835" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/33AAW1NzFRQQVVnnr4CpVe" target="_blank" rel="noopener"><img src="img/covers/bloom.jpg" alt="Quartetinho: Bloom cover" loading="lazy"></a>
-        <figcaption><b>Quartetinho: Bloom</b><span>Anat Cohen · 2024</span><span class="stream"><a href="https://open.spotify.com/album/33AAW1NzFRQQVVnnr4CpVe" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/quartetinho-bloom-feat-james-shipp-vitor-gon%C3%A7alves/6816060297" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/4uraylBy6aqbY4yJ3Co6wz" target="_blank" rel="noopener"><img src="img/covers/guesthouse.jpg" alt="The Guesthouse cover" loading="lazy"></a>
-        <figcaption><b>The Guesthouse</b><span>Shai Maestro · 2026</span><span class="stream"><a href="https://open.spotify.com/album/4uraylBy6aqbY4yJ3Co6wz" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/the-guesthouse/1842362686" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/6JZTkAILyq8KJhj49kN9lC" target="_blank" rel="noopener"><img src="img/covers/ijamia.jpg" alt="Ija Mia cover" loading="lazy"></a>
-        <figcaption><b>Ija Mia</b><span>East of the River · 2024</span><span class="stream"><a href="https://open.spotify.com/album/6JZTkAILyq8KJhj49kN9lC" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/ija-mia-soundscape-of-the-sephardic-diaspora/1736760051" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/54pYKKIEzKgOa69LUtNKiO" target="_blank" rel="noopener"><img src="img/covers/unsettled.jpg" alt="Unsettled cover" loading="lazy"></a>
-        <figcaption><b>Unsettled</b><span>Gilad Barakan · 2026</span><span class="stream"><a href="https://open.spotify.com/album/54pYKKIEzKgOa69LUtNKiO" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/unsettled/1877701724" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/1zI51u2ufZxGgIA0DE8r1f" target="_blank" rel="noopener"><img src="img/covers/timetraveler.jpg" alt="Time Traveler cover" loading="lazy"></a>
-        <figcaption><b>Time Traveler</b><span>Ofri Nehemya · 2025</span><span class="stream"><a href="https://open.spotify.com/album/1zI51u2ufZxGgIA0DE8r1f" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/time-traveler/6804506728" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/07NsX6YlpRexjLYTq2th6R" target="_blank" rel="noopener"><img src="img/covers/dandi.jpg" alt="Dandi cover" loading="lazy"></a>
-        <figcaption><b>Dandi</b><span>Dandi · 2025 · co-producer</span><span class="stream"><a href="https://open.spotify.com/album/07NsX6YlpRexjLYTq2th6R" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/dandi/6804294583" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/4cyQsgmpW7qjtV5nrt5uOM" target="_blank" rel="noopener"><img src="img/covers/deliberations.jpg" alt="Deliberations cover" loading="lazy"></a>
-        <figcaption><b>Deliberations</b><span>Yotam Ben-Or · 2022</span><span class="stream"><a href="https://open.spotify.com/album/4cyQsgmpW7qjtV5nrt5uOM" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/deliberations-hitlabtuyot-ep/1616575863" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/6jh565TPZx9MV3hinoQJ0r" target="_blank" rel="noopener"><img src="img/covers/endless.jpg" alt="Endless cover" loading="lazy"></a>
-        <figcaption><b>Endless</b><span>Yotam Ben-Or · 2022</span><span class="stream"><a href="https://open.spotify.com/album/6jh565TPZx9MV3hinoQJ0r" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/endless-feat-alon-near-ep/1690646434" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/733J9r77ERw2FkSjeND3Tc" target="_blank" rel="noopener"><img src="img/covers/desayuno.jpg" alt="El Desayuno cover" loading="lazy"></a>
-        <figcaption><b>El Desayuno</b><span>El Vapor de Brooklyn · 2026</span><span class="stream"><a href="https://open.spotify.com/album/733J9r77ERw2FkSjeND3Tc" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/el-desayuno-live-at-barb%C3%A9s-live-single/6811533119" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
-      <figure class="rec">
-        <a class="sleeve" href="https://open.spotify.com/album/4GHTB7CYogSgK3s56yzLtI" target="_blank" rel="noopener"><img src="img/covers/caucasus.jpg" alt="Caucasus cover" loading="lazy"></a>
-        <figcaption><b>Caucasus</b><span>Khondzi · 2021</span><span class="stream"><a href="https://open.spotify.com/album/4GHTB7CYogSgK3s56yzLtI" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/caucasus-single/1561287434" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
-      </figure>
       </div>
     </div>
   </section>
@@ -508,19 +390,6 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
     </div>
   </section>
 
-  <section class="about" id="about">
-    <div class="wrap grid">
-      <figure class="aph"><img src="img/g/about-playground.jpg" alt="Tal Mashiach playing double bass in a Brooklyn playground" loading="lazy"><figcaption>Photo: Dylan Joseph</figcaption></figure>
-      <div class="text">
-        <h2>About</h2>
-        <p>Tal Mashiach is a GRAMMY®-nominated multi-instrumentalist, composer and producer based in Brooklyn, New York, on double bass and seven-string guitar.</p>
-        <p>For more than a decade he has played with Anat Cohen’s Quartetinho and Tentet, including the GRAMMY®-nominated <em>Triple Helix</em>. He has toured with Mulatu Astatke and Omer Avital, and co-leads the GTO Trio.</p>
-        <p>His new album <em>Who’s Around?</em> (Anzic Records, 2026) brings together sixteen musicians, with Anat Cohen, Gadi Lehavi and Ofri Nehemya. It was a DownBeat Editors’ Pick, hailed as “masterfully executed world fusion.”</p>
-        <p class="bio-links"><a href="/bio/">Read full bio</a><a href="#press">Press</a></p>
-      </div>
-    </div>
-  </section>
-
   <section class="press" id="press">
     <div class="wrap">
       <h2>Press</h2>
@@ -583,6 +452,163 @@ footer.end{padding-block:28px;text-align:center;font-size:.7rem;letter-spacing:.
         </div>
       </div>
       </details>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="pgrid">
+        <article class="proj">
+          <a class="ph" href="#w-tal"><img src="img/stage/joespub-wide.jpg" alt="Who’s Around? album release show at Joe’s Pub" loading="lazy"></a>
+          <h3>Who’s Around?</h3>
+          <p>A new album of original music for a sixteen-piece ensemble. Out now on Anzic Records.</p>
+          <p class="links"><a href="#w-tal">Watch</a><a href="https://open.spotify.com/album/2uv1FvgJiEfPS0AjlblOZl" target="_blank" rel="noopener">Spotify</a></p>
+        </article>
+        <article class="proj">
+          <a class="ph" href="#w-tal"><img src="img/g/pink-guitar.jpg" alt="Tal Mashiach with his classical guitar" loading="lazy"></a>
+          <h3>Tiyul</h3>
+          <p>Tal’s debut album as a leader, built around the nylon-string guitar. Out on Anzic Records.</p>
+          <p class="links"><a href="#w-tal">Watch</a><a href="https://open.spotify.com/album/32dfSXH7JdvDUeRnzX2Pyl" target="_blank" rel="noopener">Spotify</a></p>
+        </article>
+        <article class="proj">
+          <a class="ph" href="#w-gto"><img src="img/stage/gto-redcar.jpg" alt="GTO Trio: Gadi Lehavi, Tal Mashiach and Ofri Nehemya" loading="lazy"><span class="pcredit">Photo: Gaya Photos</span></a>
+          <h3>GTO Trio</h3>
+          <p>With Gadi Lehavi and Ofri Nehemya. Two albums and sold-out tours in Japan and Europe.</p>
+          <p class="links"><a href="#w-gto">Watch</a><a href="https://open.spotify.com/album/0qpNwnAq2JjQiGE63JR1da" target="_blank" rel="noopener">Spotify</a></p>
+        </article>
+        <article class="proj">
+          <a class="ph" href="#w-tm"><img src="img/stage/tmsb-jump.jpg" alt="TM Street Band jumping in a New York street" loading="lazy"></a>
+          <h3>TM Street Band</h3>
+          <p>A Brooklyn street band of horns, harmonica and groove. Debut album <em>Sababito</em>.</p>
+          <p class="links"><a href="#w-tm">Watch</a><a href="https://open.spotify.com/album/3f7Jr6hkv470Dr3P1nNO3J" target="_blank" rel="noopener">Spotify</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="shows" id="shows">
+    <div class="wrap">
+      <h2>Shows</h2>
+      <p class="label shows-h">Upcoming</p>
+      <ol class="list" id="upcoming">
+        <li class="empty"><span>New dates soon.</span><a href="https://www.bandsintown.com/a/15496265" target="_blank" rel="noopener">Follow on Bandsintown</a></li>
+      </ol>
+      <details class="past">
+        <summary class="label shows-h">Past shows</summary>
+        <ol class="list">
+        <li><span class="d">2026</span><span class="v">Joe’s Pub</span><span class="c">New York</span><span class="w">Who’s Around? release</span></li>
+        <li><span class="d">2024</span><span class="v">Carnegie Hall</span><span class="c">New York</span><span class="w">Anat Cohen Quartetinho</span></li>
+        <li><span class="d">2024</span><span class="v">Hollywood Bowl</span><span class="c">Los Angeles</span><span class="w">Mulatu Astatke</span></li>
+        <li><span class="d">2024</span><span class="v">Newport Jazz Festival</span><span class="c">Newport, RI</span><span class="w">Anat Cohen Quartetinho</span></li>
+        <li><span class="d">2024</span><span class="v">Body &amp; Soul</span><span class="c">Tokyo</span><span class="w">GTO Trio</span></li>
+        <li><span class="d">2023</span><span class="v">Red Sea Jazz Festival</span><span class="c">Eilat</span><span class="w">Tal Mashiach Quartet</span></li>
+        <li><span class="d">2022</span><span class="v">Jazz à Sète</span><span class="c">France</span><span class="w">Omer Avital</span></li>
+        <li><span class="d">2022</span><span class="v">SFJAZZ</span><span class="c">San Francisco</span><span class="w">Anat Cohen Tentet</span></li>
+        <li><span class="d">2018</span><span class="v">Monterey Jazz Festival</span><span class="c">California</span><span class="w">Anat Cohen Tentet</span></li>
+        </ol>
+      </details>
+    </div>
+  </section>
+
+  <section class="music" id="music">
+    <div class="wrap">
+      <h2>Music</h2>
+      <p class="label music-h">As leader</p>
+      <div class="disco">
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/2uv1FvgJiEfPS0AjlblOZl" target="_blank" rel="noopener"><img src="img/cover.jpg" alt="Who’s Around? cover" loading="lazy"></a>
+        <figcaption><b>Who’s Around?</b><span>2026</span><span class="stream"><a href="https://open.spotify.com/album/2uv1FvgJiEfPS0AjlblOZl" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/whos-around/6815710306" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/0qpNwnAq2JjQiGE63JR1da" target="_blank" rel="noopener"><img src="img/covers/within.jpg" alt="Within cover" loading="lazy"></a>
+        <figcaption><b>Within</b><span>GTO Trio · 2025</span><span class="stream"><a href="https://open.spotify.com/album/0qpNwnAq2JjQiGE63JR1da" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/within-feat-gadi-lehavi-tal-mashiach-ofri-nehemya/6816061937" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/32dfSXH7JdvDUeRnzX2Pyl" target="_blank" rel="noopener"><img src="img/tiyul.jpg" alt="Tiyul cover" loading="lazy"></a>
+        <figcaption><b>Tiyul</b><span>2022</span><span class="stream"><a href="https://open.spotify.com/album/32dfSXH7JdvDUeRnzX2Pyl" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/tiyul/6816988608" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/6CTE59dXnM1ReYpVEzv8ES" target="_blank" rel="noopener"><img src="img/covers/fromtheroad.jpg" alt="From The Road cover" loading="lazy"></a>
+        <figcaption><b>From The Road</b><span>GTO Trio · 2018</span><span class="stream"><a href="https://open.spotify.com/album/6CTE59dXnM1ReYpVEzv8ES" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/from-the-road/1435350507" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/3f7Jr6hkv470Dr3P1nNO3J" target="_blank" rel="noopener"><img src="img/covers/sababito.jpg" alt="Sababito cover" loading="lazy"></a>
+        <figcaption><b>Sababito</b><span>TM Street Band · 2018</span><span class="stream"><a href="https://open.spotify.com/album/3f7Jr6hkv470Dr3P1nNO3J" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/sababito-ep/1341536690" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      </div>
+      <p class="label music-h">Featured on</p>
+      <div class="disco">
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/5tnvCNAHzg5R1vgk685oPL" target="_blank" rel="noopener"><img src="img/covers/triplehelix.jpg" alt="Triple Helix cover" loading="lazy"></a>
+        <figcaption><b>Triple Helix</b><span>Anat Cohen Tentet · 2019 · GRAMMY® nominated</span><span class="stream"><a href="https://open.spotify.com/album/5tnvCNAHzg5R1vgk685oPL" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/triple-helix/6819338059" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/1HCurquSxj0DRnHBcIGP72" target="_blank" rel="noopener"><img src="img/covers/quartetinho.jpg" alt="Quartetinho cover" loading="lazy"></a>
+        <figcaption><b>Quartetinho</b><span>Anat Cohen · 2022</span><span class="stream"><a href="https://open.spotify.com/album/1HCurquSxj0DRnHBcIGP72" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/quartetinho/6817880069" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/4uraylBy6aqbY4yJ3Co6wz" target="_blank" rel="noopener"><img src="img/covers/guesthouse.jpg" alt="The Guesthouse cover" loading="lazy"></a>
+        <figcaption><b>The Guesthouse</b><span>Shai Maestro · 2026</span><span class="stream"><a href="https://open.spotify.com/album/4uraylBy6aqbY4yJ3Co6wz" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/the-guesthouse/1842362686" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/7rRBV0TY6WJm85o1tuxKjR" target="_blank" rel="noopener"><img src="img/covers/happysong.jpg" alt="Happy Song cover" loading="lazy"></a>
+        <figcaption><b>Happy Song</b><span>Anat Cohen Tentet · 2017</span><span class="stream"><a href="https://open.spotify.com/album/7rRBV0TY6WJm85o1tuxKjR" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/happy-song/6816985835" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/33AAW1NzFRQQVVnnr4CpVe" target="_blank" rel="noopener"><img src="img/covers/bloom.jpg" alt="Quartetinho: Bloom cover" loading="lazy"></a>
+        <figcaption><b>Quartetinho: Bloom</b><span>Anat Cohen · 2024</span><span class="stream"><a href="https://open.spotify.com/album/33AAW1NzFRQQVVnnr4CpVe" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/quartetinho-bloom-feat-james-shipp-vitor-gon%C3%A7alves/6816060297" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/6JZTkAILyq8KJhj49kN9lC" target="_blank" rel="noopener"><img src="img/covers/ijamia.jpg" alt="Ija Mia cover" loading="lazy"></a>
+        <figcaption><b>Ija Mia</b><span>East of the River · 2024</span><span class="stream"><a href="https://open.spotify.com/album/6JZTkAILyq8KJhj49kN9lC" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/ija-mia-soundscape-of-the-sephardic-diaspora/1736760051" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      </div>
+      <details class="pmore amore"><summary>More albums</summary>
+      <div class="disco">
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/54pYKKIEzKgOa69LUtNKiO" target="_blank" rel="noopener"><img src="img/covers/unsettled.jpg" alt="Unsettled cover" loading="lazy"></a>
+        <figcaption><b>Unsettled</b><span>Gilad Barakan · 2026</span><span class="stream"><a href="https://open.spotify.com/album/54pYKKIEzKgOa69LUtNKiO" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/unsettled/1877701724" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/1zI51u2ufZxGgIA0DE8r1f" target="_blank" rel="noopener"><img src="img/covers/timetraveler.jpg" alt="Time Traveler cover" loading="lazy"></a>
+        <figcaption><b>Time Traveler</b><span>Ofri Nehemya · 2025</span><span class="stream"><a href="https://open.spotify.com/album/1zI51u2ufZxGgIA0DE8r1f" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/time-traveler/6804506728" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/07NsX6YlpRexjLYTq2th6R" target="_blank" rel="noopener"><img src="img/covers/dandi.jpg" alt="Dandi cover" loading="lazy"></a>
+        <figcaption><b>Dandi</b><span>Dandi · 2025 · co-producer</span><span class="stream"><a href="https://open.spotify.com/album/07NsX6YlpRexjLYTq2th6R" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/dandi/6804294583" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/4cyQsgmpW7qjtV5nrt5uOM" target="_blank" rel="noopener"><img src="img/covers/deliberations.jpg" alt="Deliberations cover" loading="lazy"></a>
+        <figcaption><b>Deliberations</b><span>Yotam Ben-Or · 2022</span><span class="stream"><a href="https://open.spotify.com/album/4cyQsgmpW7qjtV5nrt5uOM" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/deliberations-hitlabtuyot-ep/1616575863" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/6jh565TPZx9MV3hinoQJ0r" target="_blank" rel="noopener"><img src="img/covers/endless.jpg" alt="Endless cover" loading="lazy"></a>
+        <figcaption><b>Endless</b><span>Yotam Ben-Or · 2022</span><span class="stream"><a href="https://open.spotify.com/album/6jh565TPZx9MV3hinoQJ0r" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/endless-feat-alon-near-ep/1690646434" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/733J9r77ERw2FkSjeND3Tc" target="_blank" rel="noopener"><img src="img/covers/desayuno.jpg" alt="El Desayuno cover" loading="lazy"></a>
+        <figcaption><b>El Desayuno</b><span>El Vapor de Brooklyn · 2026</span><span class="stream"><a href="https://open.spotify.com/album/733J9r77ERw2FkSjeND3Tc" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/el-desayuno-live-at-barb%C3%A9s-live-single/6811533119" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      <figure class="rec">
+        <a class="sleeve" href="https://open.spotify.com/album/4GHTB7CYogSgK3s56yzLtI" target="_blank" rel="noopener"><img src="img/covers/caucasus.jpg" alt="Caucasus cover" loading="lazy"></a>
+        <figcaption><b>Caucasus</b><span>Khondzi · 2021</span><span class="stream"><a href="https://open.spotify.com/album/4GHTB7CYogSgK3s56yzLtI" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/caucasus-single/1561287434" target="_blank" rel="noopener">Apple Music</a></span></figcaption>
+      </figure>
+      </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap grid">
+      <figure class="aph"><img src="img/g/about-playground.jpg" alt="Tal Mashiach playing double bass in a Brooklyn playground" loading="lazy"><figcaption>Photo: Dylan Joseph</figcaption></figure>
+      <div class="text">
+        <h2>About</h2>
+        <p>Tal Mashiach is a GRAMMY®-nominated multi-instrumentalist, composer and producer based in Brooklyn, New York, on double bass and seven-string guitar.</p>
+        <p>For more than a decade he has played with Anat Cohen’s Quartetinho and Tentet, including the GRAMMY®-nominated <em>Triple Helix</em>. He has toured with Mulatu Astatke and Omer Avital, and co-leads the GTO Trio.</p>
+        <p>His new album <em>Who’s Around?</em> (Anzic Records, 2026) brings together sixteen musicians, with Anat Cohen, Gadi Lehavi and Ofri Nehemya. It was a DownBeat Editors’ Pick, hailed as “masterfully executed world fusion.”</p>
+        <p class="bio-links"><a href="/bio/">Read full bio</a><a href="#press">Press</a></p>
+      </div>
     </div>
   </section>
 
